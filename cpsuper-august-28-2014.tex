@@ -1,0 +1,1724 @@
+\documentclass[epsfig,12pt]{article}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{relsize}
+\usepackage{geometry}
+\geometry{letterpaper}
+\usepackage{color}
+\usepackage{bm}
+\usepackage{slashed}
+\usepackage{showlabels}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                     D O C U M E N T   S E T T I N G S                        %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\baselinestretch{1.1}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+\hyphenation{con-fi-ning}
+\hyphenation{Cou-lomb}
+\hyphenation{Yan-ki-e-lo-wicz}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                      C O M M O N   D E F I N I T I O N S                     %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\beq{\begin{equation}}
+\def\eeq{\end{equation}}
+\def\beqn{\begin{eqnarray}}
+\def\eeqn{\end{eqnarray}}
+\def\beqn{\begin{eqnarray}}
+\def\eeqn{\end{eqnarray}}
+\def\nn{\nonumber}
+\def\ba{\beq\new\begin{array}{c}}
+\def\ea{\end{array}\eeq}
+\def\be{\ba}
+\def\ee{\ea}
+\newcommand{\beas}{\begin{eqnarray*}}
+\newcommand{\eeas}{\end{eqnarray*}}
+\newcommand{\defi}{\stackrel{\rm def}{=}}
+\newcommand{\non}{\nonumber}
+\newcommand{\bquo}{\begin{quote}}
+\newcommand{\enqu}{\end{quote}}
+\newcommand{\m}{\tilde m}
+\newcommand{\trho}{\tilde{\rho}}
+\newcommand{\tn}{\tilde{n}}
+\newcommand{\tN}{\tilde N}
+%\newcommand{\p}{\partial}
+\newcommand{\gsim}{\lower.7ex\hbox{$\;\stackrel{\textstyle>}{\sim}\;$}}
+\newcommand{\lsim}{\lower.7ex\hbox{$\;\stackrel{\textstyle<}{\sim}\;$}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% definitions
+
+\def\de{\partial}
+\def\const{\hbox {\rm const.}}  
+\def\o{\over}
+\def\im{\hbox{\rm Im}}
+\def\re{\hbox{\rm Re}}
+\def\bra{\langle}\def\ket{\rangle}
+\def\Arg{\hbox {\rm Arg}}
+\def\Re{\hbox {\rm Re}}
+\def\Im{\hbox {\rm Im}}
+\def\diag{\hbox{\rm diag}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\QATOPD#1#2#3#4{{#3 \atopwithdelims#1#2 #4}}
+\def\stackunder#1#2{\mathrel{\mathop{#2}\limits_{#1}}}
+\def\stackreb#1#2{\mathrel{\mathop{#2}\limits_{#1}}}
+\def\res{{\rm res}}
+\def\Bf#1{\mbox{\boldmath $#1$}}
+\def\balpha{{\Bf\alpha}}
+\def\bbeta{{\Bf\beta}}
+\def\bgamma{{\Bf\gamma}}
+\def\bnu{{\Bf\nu}}
+\def\bmu{{\Bf\mu}}
+\def\bphi{{\Bf\phi}}
+\def\bPhi{{\Bf\Phi}}
+\def\bomega{{\Bf\omega}}
+\def\blambda{{\Bf\lambda}}
+\def\brho{{\Bf\rho}}
+\def\bsigma{{\bfit\sigma}}
+\def\bxi{{\Bf\xi}}
+\def\bbeta{{\Bf\eta}}
+\def\d{\partial}
+\def\der#1#2{\frac{\d{#1}}{\d{#2}}}
+\def\Im{{\rm Im}}
+\def\Re{{\rm Re}}
+\def\rank{{\rm rank}}
+\def\diag{{\rm diag}}
+\def\2{{1\over 2}}
+\def\x{\stackrel{\otimes}{,}}
+
+\def\ba{\beq\new\begin{array}{c}}
+\def\ea{\end{array}\eeq}
+\def\be{\ba}
+\def\ee{\ea}
+\def\stackreb#1#2{\mathrel{\mathop{#2}\limits_{#1}}}
+
+
+
+\newcommand{\nfour}{${\cal N}=4\;$}
+\newcommand{\none}{${\mathcal N}=1\,$}
+\newcommand{\nonen}{${\mathcal N}=1$}
+\newcommand{\ntwo}{${\mathcal N}=2$}
+\newcommand{\ntt}{${\mathcal N}=(2,2)\,$}
+\newcommand{\nzt}{${\mathcal N}=(0,2)\,$}
+\newcommand{\ntwon}{${\mathcal N}=2$}
+\newcommand{\ntwot}{${\mathcal N}= \left(2,2\right) $ }
+\newcommand{\ntwoo}{${\mathcal N}= \left(0,2\right) $ }
+\newcommand{\ntwoon}{${\mathcal N}= \left(0,2\right)$}
+
+
+\newcommand{\ca}{{\mathcal A}}
+\newcommand{\cell}{{\mathcal L}}
+\newcommand{\cw}{{\mathcal W}}
+\newcommand{\cs}{{\mathcal S}}
+\newcommand{\vp}{\varphi}
+\newcommand{\pt}{\partial}
+\newcommand{\ve}{\varepsilon}
+\newcommand{\gs}{g^{2}}
+\newcommand{\zn}{$Z_N$}
+\newcommand{\cd}{${\mathcal D}$}
+\newcommand{\cde}{{\mathcal D}}
+\newcommand{\cf}{${\mathcal F}$}
+\newcommand{\cfe}{{\mathcal F}}
+\newcommand{\ff}{\mc{F}}
+\newcommand{\bff}{\ov{\mc{F}}}
+
+
+\newcommand{\p}{\partial}
+\newcommand{\wt}{\widetilde}
+\newcommand{\ov}{\overline}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\md}{\mathcal{D}}
+\newcommand{\ml}{\mathcal{L}}
+\newcommand{\mw}{\mathcal{W}}
+\newcommand{\ma}{\mathcal{A}}
+
+
+\newcommand{\GeV}{{\rm GeV}}
+\newcommand{\eV}{{\rm eV}}
+\newcommand{\Heff}{{\mathcal{H}_{\rm eff}}}
+\newcommand{\Leff}{{\mathcal{L}_{\rm eff}}}
+\newcommand{\el}{{\rm EM}}
+\newcommand{\uflavor}{\mathbf{1}_{\rm flavor}}
+\newcommand{\lgr}{\left\lgroup}
+\newcommand{\rgr}{\right\rgroup}
+
+
+\newcommand{\Mpl}{M_{\rm Pl}}
+\newcommand{\suc}{{{\rm SU}_{\rm C}(3)}}
+\newcommand{\sul}{{{\rm SU}_{\rm L}(2)}}
+\newcommand{\sutw}{{\rm SU}(2)}
+\newcommand{\suth}{{\rm SU}(3)}
+\newcommand{\ue}{{\rm U}(1)}
+
+
+\newcommand{\LN}{\Lambda_\text{SU($N$)}}
+\newcommand{\sunu}{{\rm SU($N$) $\times$ U(1) }}
+\newcommand{\sunun}{{\rm SU($N$) $\times$ U(1)}}
+\def\cfl {$\text{SU($N$)}_{\rm C+F}$ }
+\def\cfln {$\text{SU($N$)}_{\rm C+F}$}
+\newcommand{\mUp}{m_{\rm U(1)}^{+}}
+\newcommand{\mUm}{m_{\rm U(1)}^{-}}
+\newcommand{\mNp}{m_\text{SU($N$)}^{+}}
+\newcommand{\mNm}{m_\text{SU($N$)}^{-}}
+\newcommand{\AU}{\mc{A}^{\rm U(1)}}
+\newcommand{\AN}{\mc{A}^\text{SU($N$)}}
+\newcommand{\aU}{a^{\rm U(1)}}
+\newcommand{\aN}{a^\text{SU($N$)}}
+\newcommand{\baU}{\ov{a}{}^{\rm U(1)}}
+\newcommand{\baN}{\ov{a}{}^\text{SU($N$)}}
+\newcommand{\lU}{\lambda^{\rm U(1)}}
+\newcommand{\lN}{\lambda^\text{SU($N$)}}
+\newcommand{\bxir}{\ov{\xi}{}_R}
+\newcommand{\bxil}{\ov{\xi}{}_L}
+\newcommand{\xir}{\xi_R}
+\newcommand{\xil}{\xi_L}
+\newcommand{\bzl}{\ov{\zeta}{}_L}
+\newcommand{\bzr}{\ov{\zeta}{}_R}
+\newcommand{\zr}{\zeta_R}
+\newcommand{\zl}{\zeta_L}
+\newcommand{\nbar}{\ov{n}}
+\newcommand{\nnbar}{n\ov{n}}
+\newcommand{\muU}{\mu_\text{U}}
+
+
+\newcommand{\cpn}{CP$^{N-1}$\,}
+\newcommand{\CPC}{CP($N-1$)$\times$C }
+\newcommand{\CPCn}{CP($N-1$)$\times$C}
+
+
+\newcommand{\lar}{\lambda_R}
+\newcommand{\lal}{\lambda_L}
+\newcommand{\larl}{\lambda_{R,L}}
+\newcommand{\lalr}{\lambda_{L,R}}
+\newcommand{\blar}{\ov{\lambda}{}_R}
+\newcommand{\blal}{\ov{\lambda}{}_L}
+\newcommand{\blarl}{\ov{\lambda}{}_{R,L}}
+\newcommand{\blalr}{\ov{\lambda}{}_{L,R}}
+
+
+\newcommand{\bpsi}{\ov{\psi}{}}
+
+
+\newcommand{\hphi}{\hat\phi{}}
+\newcommand{\hbphi}{\hat{\ov\phi}{}}
+\newcommand{\hxi}{\hat\xi{}}
+\newcommand{\hbxi}{\hat{\ov\xi}{}}
+\newcommand{\hsigma}{\hat\sigma{}}
+\newcommand{\hbsigma}{\hat{\ov\sigma}{}}
+\newcommand{\hlambda}{\hat\lambda{}}
+\newcommand{\hblambda}{\hat{\ov\lambda}{}}
+\newcommand{\hz}{\hat z{}}
+\newcommand{\hbz}{\hat{\ov z}{}}
+\newcommand{\hzeta}{\hat\zeta{}}
+\newcommand{\hbzeta}{\hat{\ov\zeta}{}}
+
+
+
+\newcommand{\qt}{\wt{q}}
+\newcommand{\bq}{\ov{q}}
+\newcommand{\bqt}{\overline{\widetilde{q}}}
+
+
+\newcommand{\eer}{\epsilon_R}
+\newcommand{\eel}{\epsilon_L}
+\newcommand{\eerl}{\epsilon_{R,L}}
+\newcommand{\eelr}{\epsilon_{L,R}}
+\newcommand{\beer}{\ov{\epsilon}{}_R}
+\newcommand{\beel}{\ov{\epsilon}{}_L}
+\newcommand{\beerl}{\ov{\epsilon}{}_{R,L}}
+\newcommand{\beelr}{\ov{\epsilon}{}_{L,R}}
+
+
+\newcommand{\bi}{{\bar \imath}}
+\newcommand{\bj}{{\bar \jmath}}
+\newcommand{\bk}{{\bar k}}
+\newcommand{\bl}{{\bar l}}
+\newcommand{\bmm}{{\bar m}}
+
+
+\newcommand{\nz}{{n^{(0)}}}
+\newcommand{\no}{{n^{(1)}}}
+\newcommand{\bnz}{{\ov{n}{}^{(0)}}}
+\newcommand{\bno}{{\ov{n}{}^{(1)}}}
+\newcommand{\Dz}{{D^{(0)}}}
+\newcommand{\Do}{{D^{(1)}}}
+\newcommand{\bDz}{{\ov{D}{}^{(0)}}}
+\newcommand{\bDo}{{\ov{D}{}^{(1)}}}
+\newcommand{\sigz}{{\sigma^{(0)}}}
+\newcommand{\sigo}{{\sigma^{(1)}}}
+\newcommand{\bsigz}{{\ov{\sigma}{}^{(0)}}}
+\newcommand{\bsigo}{{\ov{\sigma}{}^{(1)}}}
+
+
+\newcommand{\rrenz}{{r_\text{ren}^{(0)}}}
+\newcommand{\bren}{{\beta_\text{ren}}}
+
+
+\newcommand{\Tr}{\text{Tr}}
+\newcommand{\Ts}{\text{Ts}}
+\newcommand{\dm}{\hat{{\scriptstyle \Delta} m}}
+\newcommand{\dmdag}{\hat{{\scriptstyle \Delta} m}{}^\dag}
+\newcommand{\mhat}{\widehat{m}}
+\newcommand{\deltam}{{\scriptstyle \Delta} m}
+\newcommand{\nvac}{\vec{n}{}_\text{vac}}
+
+
+\newcommand{\ie}{{\it i.e.}~}
+\newcommand{\eg}{{\it e.g.}~}
+\newcommand{\ansatz}{{\it ansatz} }
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                            T I T L E   P A G E                               %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+
+
+\begin{flushright}
+FTPI-MINN-XX/XX, UMN-TH-XXXX/XX\\
+August 18/2014/DRAFT
+\end{flushright}
+
+\vspace{1.0cm}
+
+\begin{center}
+{  \Large \bf  Low-Energy Effective Action\\[1mm]
+    of the Supersymmetric CP\boldmath{$(N-1)$} Model\\[3mm]
+    in the Large-\boldmath{$N$} Limit}
+\end{center}
+
+
+
+\vspace{2mm}
+
+\begin{center}
+
+ {\large
+ \bf   Pavel A.~Bolokhov$^{\,a}$,  Mikhail Shifman$^{\,b}$ and \bf Alexei Yung$^{\,\,b,c}$}
+\end {center}
+
+\begin{center}
+
+$^a${\it Theoretical Physics Department, St.Petersburg State University, Ulyanovskaya~1, 
+	 Peterhof, St.Petersburg, 198504, Russia}\\
+$^b${\it  William I. Fine Theoretical Physics Institute,
+University of Minnesota,
+Minneapolis, MN 55455, USA}\\
+$^{c}${\it Petersburg Nuclear Physics Institute, Gatchina, St. Petersburg
+188300, Russia
+}
+\end{center}
+
+\vspace{0.6cm}
+
+\begin{center}
+{\large\bf Abstract}
+\end{center}
+
+\hspace{0.3cm}
+
+	Motivated by an old would-be paradox we found a solution of supersymmetric CP$(N-1)$ models in superfields.
+	Our main target is the  K\"ahler potential, since the superpotential term was exactly known since early 1990s.
+	To this end we used the large-$N$ expansion to 
+	perform a supersymmetric calculation in the leading order in $1/N$. 
+	The models considered are ${\mathcal N}= (2,2)$ basic CP$(N-1)$ model and  its nonminimal ${\mathcal N}= (0,2)$ 
+	deformation various aspects of which are being actively studied since 2007. 
+	Another extension  is solving the above models in the presence of 
+	nonvanishing twisted masses. 
+\vspace{2cm}
+
+
+\end{titlepage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                            I N T R O D U C T I O N                           %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{sec1}
+
+	Supersymmetric and non-supersymmetric CP$(N-1)$ models in two dimensions are exactly solvable in the large-$N$ limit \cite{0,1p,SYhet}. 
+	Moreover, the superpotential part can be found exactly (for any $N$) \cite{1,2,3} in terms of the so-called 
+	twisted superfield $\Sigma$ (to be defined below) in the form
+\beq
+	{\mathcal L}_{\rm sp}    ~~=~~    \text{const} \cdot \!\lgr \int\, 
+		d\theta_Rd\bar\theta_L \left( \sqrt{2}\Sigma\, \log \sqrt{2}\Sigma ~-~  
+					      \sqrt{2}\Sigma \right) ~~+~~ \text{h.c.}\rgr\!.
+\label{1}
+\eeq
+	For brevity below we will sometimes refer to above expression as the Witten superpotential.
+	Equation (\ref{1})  encodes all information about the anomalies of the CP$(N-1)$ model. 
+	In this sense it is akin to the Veneziano--Yankielowicz superpotential \cite{Veneziano} in ${\mathcal N}=1$ 
+	super-Yang-Mills theory in four dimensions. 
+	However, the Veneziano-Yankielowicz result admittedly presents an effective superpotential 
+	suitable only for determination of the vacuum structure while (\ref{1}) presents the exact 
+	superpotential part of the solution of the CP$(N-1)$ model.
+
+	The scalar superpotential for the CP$(N-1)$ models in the large-$N$ limit was  found in \cite{SYhet,BSYhet} 
+	(from a nonsupersymmetric calculation) to have the form
+\beq
+	V    ~~=~~    \frac{N}{4\pi}\,\bigg\{\Lambda^2 ~~+~~ 
+			\big|\sqrt{2}\sigma\big|^2\Big(\log \frac{\big|\sqrt{2}\sigma\big|^2}{\Lambda^2}
+					~-~ 1\Big)\bigg\}\,,
+\label{2}
+\eeq
+	where $\sigma$ is the lowest component of $\Sigma$. In \cite{BSYhet} it was checked that the critical points of (\ref{1})
+	coincide with the minima of the scalar potential (\ref{2}). Both expressions lead to zero-energy ground states, 
+	{\it i.e.}  to supersymmetric vacua.
+
+	Rather often an apparent paradox is pointed out in comparing (\ref{1}) and (\ref{2}). 
+	Usually it is assumed that the K\"ahler term in the superfield formulation has the simplest possible form 
+	invariant under scale transformations (and those related to the scale transformations by supersymmetry), namely,
+\beq
+	{\mathcal L}_\text{K}    ~~=~~    \text{const} \cdot  
+				\int\, d^4 \theta\, \log \!\sqrt{2}\Sigma\,\,  \log\! \sqrt{2}\bar\Sigma\,.
+\label{3}
+\eeq
+	Then, eliminating the $D$ term (the last component of $\Sigma$) by using equations of motion for $D$,
+	we would obviously arrive at
+\beq
+	V    ~~=~~    \text{const} \cdot \left(\, \big|\sqrt{2}\sigma\big|^2\, \log \big|\sqrt{2}\sigma\big|^2 \,\right)^2\,.
+\eeq
+	It is clear that this expression, being proportional to the square of a logarithm, cannot coincide
+	with (\ref{2}). 
+
+	A way out from this paradox was pointed out in  \cite{BSYhet}. 
+	There it was suggested that the minimal  form of the 
+	K\"ahler term (\ref{3}) is not complete. 
+	The K\"ahler term is in fact more complicated (although still compatible with scale invariance) ---  
+	there is an extra contribution to ${\mathcal L}_{\rm K}$ having a special feature of vanishing at $D=0$, 
+	{\it i.e.} in supersymmetric vacua. 
+	However, the result for the full ${\mathcal L}_{\rm K}$ was not derived.
+	Here we close this gap carrying out a supersymmetric calculation of both ${\mathcal L}_{\rm K}$ and 
+	${\mathcal L}_{\rm sp}$ to the leading order in $1/N$. 
+	While the latter coincides with (\ref{1}), as was expected,
+	the expression for ${\mathcal L}_{\rm K}$ in the large-$N$ solution brings a surprise.\footnote{
+	Note that unlike ${\mathcal L}_{\rm sp}$
+	the K\"ahler potential cannot be exactly established on general grounds and requires an actual 
+	and rather cumbersome calculation which, fortunately, can be performed to the  leading order in $1/N$.
+	} The K\"ahler potential obtained depends not only on $\Sigma$ and $\overline\Sigma$, as is usually the case,  
+	but also on superderivatives of these superfields.  
+	This is the reason why scale invariance apparent in (\ref{3}) can be maintained in additional terms $\Delta {\mathcal L}_{\rm K}$.
+
+	Combining our expression for the full  K\"ahler potential with (\ref{1}) we recover the scalar potential (\ref{2}). 
+
+	The outline of the paper is as follows. 
+	Section \ref{ssuper} is introductory.
+	Here we introduce our basic notation, in particular, 
+	twisted superfields\footnote{Further notation can be found in Appendix.}, formulate the problem in more detail, 
+	and essentially ``guess'' the supersymmetric large-$N$ solution in terms of twisted superfields.
+	In Sec. \ref{saction} we expand the superfield action in components in the two-derivative approximation.
+	At the end of that section we derive the scalar potential (\ref{2}) from the superpotential (\ref{1}) 
+	and the K\"ahler potential we found in our supersymmetric calculation based on the large-$N$ expansion.
+	Section \ref{shet} treats the nonminimal heterotic deformation of CP$(N-1)$ models worked out in \cite{EdTo,SY1}, 
+	see also \cite{SYhet,BSYhet,BSY1}, to the leading order in $1/N$. 
+	In Sec. \ref{stwist} we repeat the procedure with non vanishing twisted masses introduced in a standard way. 
+	Finally, Section \ref{sfinal} summarizes our results and conclusions.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                     S U P E R S Y M M E T R I Z A T I O N                    %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Supersymmetrization of the Effective Potential}
+\label{ssuper}
+
+	We start from the supersymmetric two-dimensional \cpn model,
+\begin{align}
+\label{sigma22}
+% 
+\notag
+ 	\mc{L}_\text{(2,2)} & ~~=~~
+	\,\frac{1}{4e^2}\,F_{kl}^2  ~+~ \frac{1}{e^2} \left|\p_k \sigma\right|^2 
+	~+~ \frac{1}{2e^2}\, D^2
+	~+~ \frac{1}{e^2}\, \blar\, i\p_L\, \lar  ~+~  \frac{1}{e^2} \blal\, i\p_R\, \lal
+	~+~
+	\\[2mm]
+%
+	&
+	~~+~~
+	\left| \nabla n \right|^2  ~+~ | \sqrt{2}\sigma |^2 \left| n^l \right|^2
+	~+~ iD \left( \left|n^l \right|^2 - 2\beta \right)
+	~+~
+	\\[2.8mm]
+%
+\notag	&
+	~~+~~ \bxir\, i\nabla_L \xir  ~+~ \bxil\, i\nabla_R \xil ~+~
+	i\sqrt{2}\sigma\, \ov{\xi}{}_{Rl} \xi_L^l
+	~+~ i\sqrt{2}\ov{\sigma}\, \ov{\xi}{}_{Ll} \xi_R^l
+	~+~
+	\\[2.8mm]
+%
+\notag
+	&
+	~~+~~ i\sqrt{2}\, \ov{\xi_{[R}\, \lambda}{}_{L]}\, n
+	~-~ i\sqrt{2}\, \nbar\,  \lambda_{[R}\, \xi_{L]}\,,
+	\qquad
+	l  ~=~  1,\,...\,N\,.
+\end{align}
+	The notations are explained in \cite{BSY3}, although they are of no great importance
+	for our discussion. 
+	In \cite{SYhet}, the large-$ N $ effective potential of the theory was found
+	by integrating over $ n^l $ fields and their superpartners $ \xi $:
+\beq
+\label{Veff}
+	V_\text{eff}    ~~=~~    -\, \frac{N}{4\pi} 
+	\bigg\{
+		\big( \big|\sqrt{2}\sigma\big|^2 \,+\, iD \big) 
+		\log \big( \big|\sqrt{2}\sigma\big|^2 \,+\, iD \big)
+		~-~
+		iD
+		~-~
+		\big|\sqrt{2}\sigma\big|^2 \log \big|\sqrt{2}\sigma\big|^2
+	\bigg\}\,.
+\eeq
+	We quickly note that this expression can be cast
+	in integral forms which will appear useful further on in our paper,
+\begin{align}
+%
+\notag
+	\frac{4\pi}{N}\, V_\text{eff} &    ~~=~~    -\, \int_0^{iD} \!\!dt\, \ln \big(\, \big|\sqrt{2}\sigma\big|^2 \,+\, t \,\big)
+	~~=
+	\\
+%
+\label{Vint}
+	&
+	~~=~~    - \big|\sqrt{2}\sigma\big|^2 \lgr \ln \big|\sqrt{2}\sigma\big|^2 \cdot x ~+~
+						\int_0^x \ln\, (1 + x)\, dx \rgr.
+\end{align}
+	Here $ x $ is a variable that is slightly more convenient to use than $ D $,
+\beq
+	x    ~~=~~    \frac{iD}{\big|\sqrt{2}\sigma\big|^2}\,.
+\eeq
+	The above expression is now easy to write also as a series in $ x $,
+\beq
+\label{Vser}
+	 \frac{4\pi}{N}\, V_\text{eff}    ~~=~~
+		x\, \big|\sqrt{2}\sigma\big|^2 \lgr -\, \ln\, \big|\sqrt{2}\sigma\big|^2 ~+~
+		\sum_{k \geq 1}\, \frac{(-1)^k} 
+                                      { k\,(k + 1) }\, x^k \rgr.
+\eeq
+	In this form, the potential precisely agrees with the effective action found in \cite{1p},
+	in the limit where space-time derivatives of fields are discarded.
+
+	Our goal is to find a supersymmetric expression written explicitly in superfields,
+	the {\it constant} bosonic part of which would coincide with \eqref{Vser}.
+
+	Although both $ \sigma $ and $ D $ are part of the \ntwot supermultiplet $ V $,
+	it is more convenient to work in terms of the {\it twisted} chiral superfield $ \Sigma $
+	instead of $ V $,
+\begin{align}
+\label{defSigma}
+%%
+	\Sigma    & ~~=~~    \frac{i}{\sqrt 2}\, D_L\, \ov D{}_R\, V\,,
+	&
+	\ov \Sigma    & ~~=~~    \frac{i}{\sqrt 2}\, D_R\, \ov D{}_L\, V\,.
+\end{align}
+	A general definition of a twisted chiral superfield is that
+\beq
+	D_L\, \Sigma    ~~=~~    \ov D{}_R\, \Sigma    ~~=~~    0\,.
+\eeq
+	Field $ \sigma $ naturally comes as the lowest component of superfield $ \Sigma $
+	defined as in \eqref{defSigma},
+\beq
+	\Sigma     ~~=~~    \sigma  ~~-~~  \sqrt{2}\, \theta_R \ov\lambda{}_L
+				    ~~+~~  \sqrt{2}\, \ov\theta{}_L \lambda_R
+				    ~~+~~  \sqrt{2}\, \theta_R \ov\theta{}_L \lgr D ~-~ i\, F_{03} \rgr.
+\eeq
+	So, essentially, all occurences of field $ \sigma $ in \eqref{Vser} can be replaced with $ \Sigma $.
+
+	In order to ``supersymmetrize'' field $ D $ we need to get to higher components of $ \Sigma $.
+	This is achieved by introducing a twisted chiral superfield $ S $,
+\beq
+	S    ~~=~~    \frac{i}{2}\,\ov D{}_R D_L \ln \sqrt{2}\ov\Sigma\,,
+	\qquad\qquad
+	\ov S    ~~=~~    \frac{i}{2}\, \ov D{}_L D_R \ln \sqrt{2}\Sigma\,.
+\eeq
+	Now it appears that the ratio $ x \,=\, iD/|\sigma|^2 $ is best supersymmetrized \cite{1p} by
+	the ratio of $ S $ and $ \Sigma $,
+\beq
+	x    ~~=~~    \frac{iD}{\big|\sqrt{2}\sigma\big|^2}    ~~~~\longrightarrow~~~~
+		\frac{S}{\sqrt{2}\Sigma}\,.
+\eeq
+
+	Using twisted superfields one can construct {\it twisted superpotentials}
+\beq
+	\int\, d^2\tilde\theta\, \wt{\cw}(\Sigma)    ~~=~~    \frac{1}{2}\,\ov D{}_L\, D_R\, \wt{\cw}(\Sigma)\Big|\,,
+\eeq
+	and regular $ d^4\theta $ integrals --- of course, provided there is something non-twisted chiral
+	in the integrand.
+
+	Armed with these definitions, we can now translate series \eqref{Vser} into
+	the language of superfields.
+	The first term in Eq.~\eqref{Vser} comes from the so-called Witten's superpotential,
+\beq
+	i \int\, d^2\tilde\theta 
+	\lgr
+		\sqrt{2}\Sigma\, \ln \sqrt{2}\Sigma  ~-~ \sqrt{2}\Sigma
+	\rgr.
+\eeq
+	The series in \eqref{Vser} can be shown to sit in the highest component of
+	the following expression,
+\beq
+	\frac{i}{2}\, 
+	S\,
+	\sum_{k \geq 1}\, \frac{    (-1)^k    }
+                           {  k\,(k + 1)\,(k + 2)  } \lgr \frac{S}{\sqrt{2}\Sigma} \rgr^k.
+\eeq
+	This, actually, accounts for all terms in the series in Eq.~\eqref{Vser} but the first one.
+	That one happens to be part of a separate, ``superkinetic'' term $ |\ln \Sigma\,|^2 $ ---
+	the choice for such a name will be clear later.
+
+	Altogether, the effective action in an explicitly supersymmetric form can be written as,
+\begin{align}
+%
+\notag
+	\frac{4\pi}{N}\,\cell &    ~~=~~
+			-\,
+			\int\, d^4\theta\, \frac{1}{2}\, \Big| \ln \sqrt{2}\Sigma \, \Big|^2
+			~~-~~
+			i \int\, d^2\tilde\theta 
+			\lgr
+			\sqrt{2}\Sigma\, \ln \sqrt{2}\Sigma  ~-~ \sqrt{2}\Sigma
+			\rgr
+			~~+
+	\\
+%
+\label{sseries}
+	&
+			\phantom{~~=~~}
+			+~~
+			\frac{i}{2}\, 
+			\int\, d^2\tilde\theta\,
+			S\,
+			\sum_{k \geq 1}\, \frac{    (-1)^k    }
+                                           {  k\,(k + 1)\,(k + 2)  } \lgr \frac{S}{\sqrt{2}\Sigma} \rgr^k
+			~~+~~ \text{h.c.}.
+\end{align}
+
+	The series in the second line can be written as a $ D $-term.
+	We get
+\begin{align}
+%
+\notag
+	\frac{4\pi}{N}\, \cell &    ~~=~~     
+			-\,
+			\int\, d^4\theta\, \frac{1}{2}\, \Big| \ln \sqrt{2}\Sigma \, \Big|^2
+			~~-~~
+			i \int\, d^2\tilde\theta 
+			\lgr
+			\sqrt{2}\Sigma\, \ln \sqrt{2}\Sigma  ~-~ \sqrt{2}\Sigma
+			\rgr
+			~~+
+	\\
+%
+	&
+			\phantom{~~=~~}
+			+~~ 
+			\frac{1}{2} \int\, d^4\theta\,
+			\ln \sqrt{2}\ov\Sigma\,
+			\sum_{k \geq 1}\, \frac{    (-1)^k    }
+                                           {  k\,(k + 1)\,(k + 2)  }\, \lgr \frac{S}{\sqrt{2}\Sigma} \rgr^k
+	~~+~~ \text{h.c.}
+\end{align}
+	Here we can see explicitly that the only $ F $-term is the Witten's superpotential,
+	while all other terms are $ D $-terms.
+	Finally, the above series obviously can be re-summed, 
+	and not quite surprisingly will form a logarithm,
+	as we started from a logarithm in Eq.~\eqref{Veff},
+\begin{align}
+%
+\notag
+	&
+	\frac{4\pi}{N}\, \cell    ~~=~~     
+			-\,
+			\int\, d^4\theta\, \frac{1}{2}\, \Big| \ln \sqrt{2}\Sigma \, \Big|^2
+			~~-~~
+			i \int\, d^2\tilde\theta 
+			\lgr
+			\sqrt{2}\Sigma\, \ln \sqrt{2}\Sigma  ~-~ \sqrt{2}\Sigma
+			\rgr
+			~~-
+	\\
+%
+\label{Lsuper}
+			&
+			-~~ 
+			\frac{1}{4} \int\, d^4\theta\,
+			\ln\, \sqrt{2}\ov\Sigma
+			\lgr \Big( 1 \,+\, \frac{\sqrt{2}\Sigma}{S} \Big)^2\,
+				\ln \Big(\, 1 \,+\, \frac{S}{\sqrt{2}\Sigma} \,\Big) ~-~
+				\frac{\sqrt{2}\Sigma}{S} \rgr\!\!
+			~~+~~ \text{h.c.}
+\end{align}
+
+	The above expression consists of three parts --- the ``superkinetic'' term, Witten's superpotential
+	and an additional logarithmic $ D $-term.
+	Both the superkinetic and the logarithmic $ D $-terms form the K\"{a}hler potential of the target space.
+	For a minute, let us pretend that the complicated logarithmic $ D $-term did not exist, 
+	and let us find the component expansion of the superkinetic term and Witten's potential,
+\begin{align}
+%
+\notag
+	\frac{4\pi}{N}\, \cell_{(0)} &    ~~=~~
+	-\, \int\, d^4\theta\, \bigg\lgroup \frac{1}{2}\, \Big| \ln \sqrt{2}\Sigma \, \Big|^2
+			~+~ 
+	\\[2mm]
+%
+\notag
+	&
+			~+~
+			i\, d^2\tilde\theta 
+			\lgr \sqrt{2}\Sigma\, \ln \sqrt{2}\Sigma  ~-~ \sqrt{2}\Sigma \rgr
+			~+~
+			i\, d^2\ov{\tilde\theta}
+			\lgr \sqrt{2}\ov\Sigma\, \ln \sqrt{2}\ov\Sigma  ~-~ \sqrt{2}\ov\Sigma \rgr
+			\!\!\bigg\rgroup
+			=~ 
+	\\[2mm]
+%
+\notag
+	&     ~~=~~
+	-\,iD\, \log |\sqrt{2}\sigma|^2  ~~-~~  \frac{1}{2}\, \frac{ \big(i D\big)^2 } { \big|\sqrt{2}\sigma\big|^2 }
+	~~-~~ F_{03}\, \log\, \frac{\sqrt{2}\sigma}{\sqrt{2}\ov\sigma}
+	~~+~~
+	\\[2mm]
+%
+\label{L0}
+	&
+	~~+~~ \frac{
+		\big|\p_\mu \sigma\big|^2  ~+~  \frac{\displaystyle 1}{\displaystyle 2}\,F_{03}^2  ~+~
+		\frac{\displaystyle 1}{\displaystyle 2}\!
+			    \lgr\, \ov\lambda{}_R\, i\overleftrightarrow{\md_L} \lambda_R  ~+~ 
+				   \ov\lambda{}_L\, i\overleftrightarrow{\md_R} \lambda_L \rgr
+		} { \big|\sqrt{2}\sigma\big|^2 }
+	~~-~~
+	\\[2mm]
+%
+\notag
+	&
+	~~-~~ 2\,\frac{
+			i\sqrt{2}\sigma\ov\lambda{}_R\lambda_L  ~+~  
+			i\sqrt{2}\,\ov{\sigma\lambda}{}_L\lambda_R
+		} { \big|\sqrt{2}\sigma\big|^2 }
+	~~+~~ 2\, \frac{
+			\ov\lambda{}_R \lambda_L \ov\lambda{}_L \lambda_R
+		} { \big|\sqrt{2}\sigma\big|^4 }
+	~~+~~
+	\\[2mm]
+%
+\notag
+	&
+	~~+~~
+	\frac{	(iD + F_{03})\, i\sqrt{2}\sigma \ov\lambda{}_R\lambda_L ~+~
+		(iD - F_{03})\, i\sqrt{2}\,\ov{\sigma \lambda}{}_L\lambda_R  }
+		{ \big|\sqrt{2}\sigma\big|^4 }\,.
+\end{align}
+	The long derivatives here are {\it (not sure why they have different signs, shouldn't)}
+\begin{align}
+%
+\notag
+	\md_L &    ~~=~~    \p_L  ~~-~~  \p_L \ln \sqrt{2}\sigma
+	\\[1mm]
+%
+	\md_R &    ~~=~~    \p_R  ~~+~~  \p_R \ln \sqrt{2}\sigma\,,
+\end{align}
+	with conjugate expressions for the left-ward derivatives 
+	$ \overleftarrow{\md}{}_L $ and $ \overleftarrow{\md}{}_R $.
+	These derivatives include the Christoffel symbol $ 1 / \sigma $ which arises from
+	the fact that we have a  K\"ahler potential $ \big| \log \Sigma \big|^2 $.
+	This potential is singular at zero, as the $ n^l $ fields of the 
+	gauge formulation of the sigma model 
+	(that were integrated out in \cite{SYhet} to find \eqref{Veff}) 
+	would become massless at $ \sigma \,=\, 0 $.
+	In coordinates $ \Sigma $, $ \ov\Sigma $ the K\"ahler potential generates a metric $ 1 / |\sigma|^2 $
+	which is seen in the denominators in the expressions above.
+	However, the Riemann tensor is zero for this metric, reflecting the
+	observation that the target space is in fact flat ---
+	if one adopts $ \log \Sigma $ and $ \log \ov\Sigma $ as the coordinates, the metric
+	disappears completely.
+	This also explains why the terms in Eq.~\eqref{L0} that come from the
+	superkinetic term are scale invariant ---
+	the logarithmic field $ \log \Sigma $ depends on scale-invariant ratios
+	$ \ov\lambda{}_L/\sigma $, $ \lambda_R/\sigma $ {\it etc}.
+	Still, we prefer to work with the coordinates $ \Sigma $ and $ \ov\Sigma $.
+
+	The first two terms in the component expansion in \eqref{L0} form the 
+	leading part of the effective potential \eqref{Vser}.
+	The third term is the anomaly{\it, may need more discussion}.
+	The terms on the fourth line in \eqref{L0} are the kinetic terms, 
+	while the terms on the rest of the lines are Yukawa-like and quartic couplings.
+	Although we have only written the ``trivial'' part of the action,
+	it already contains quite a bit of low-energy information about the theory.
+	We will now see that the complicated logarithmic $ D $-term gives a
+	correction to Eq.~\eqref{L0}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%     E F F E C T I V E   A C T I O N   T O   T W O   D E R I V A T I V E S    %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Effective Action up to Two Derivatives}
+\label{saction}
+	Full component expansion of the effective action \eqref{Lsuper} is given
+	in Appendix~\ref{app:expansion}.
+	However, since at low energies we are only interested in the lowest level
+	of momenta, we can limit ourselves to only the lowest powers of 
+	space-time derivatives --- second for bosons and first for fermions.
+
+	To obtain the low energy action in the two-derivative approximation,
+	it is more convenient to work with the series representation \eqref{sseries}.
+	We perform the superspace integration on each of the terms in the series,
+	drop everything beyond one or two derivatives as needed,
+	and then assemble the resulting terms back into logarithms.
+	We find,
+\begin{align}
+%
+\notag
+	\cell_\text{two deriv} &    ~~=~~  
+	\frac{ \big|\p_\mu \sigma\big|^2 }
+	{ \big|\sqrt{2}\sigma\big|^2 }
+	~~-~~
+	F_{03}\, \log\, \frac{\sqrt{2}\sigma}{\sqrt{2}\ov\sigma}
+	~~+~~
+	\frac{4\pi}{N}\, V_\text{eff}
+	~~-
+	\\[2mm]
+%
+\notag
+	&
+	~~-~~
+	\frac{F_{03}^2}{\big|\sqrt{2}\sigma\big|^2}
+	\lgr 2\, \frac{ \ln (1 + x) \,-\, x } { x^2 }  ~+~
+		\frac{1}{2}\, \frac{1}{1 \,+\, x} \rgr
+	~~-
+	\\[2mm]
+%
+\notag
+	&
+	~~-~~
+	\frac{
+		\ov\lambda{}_R\, i\overleftrightarrow{\md_L} \lambda_R  ~+~ 
+		\ov\lambda{}_L\, i\overleftrightarrow{\md_R} \lambda_L
+	} { \big|\sqrt{2}\sigma\big|^2 }
+	\,
+	\frac{ \ln (1 + x) \,-\, x } { x^2 }
+	~~-
+	\\[2mm]
+%
+\label{L2d}
+	&
+	~~-~~ 
+	2\,\frac{
+		i\sqrt{2}\sigma\ov\lambda{}_R\lambda_L  ~+~  
+		i\sqrt{2}\,\ov{\sigma\lambda}{}_L\lambda_R
+	} { \big|\sqrt{2}\sigma\big|^2 }\,
+	\frac{ \ln (1 + x) } { x }
+	~~+
+	\\[2mm]
+%
+\notag
+	&
+	~~+~~
+	4\,\frac{
+		\ov\lambda{}_R \lambda_L \ov\lambda{}_L \lambda_R
+	} { \big|\sqrt{2}\sigma\big|^4 }\,
+	\lgr \frac{ \ln (1 + x) \,-\, x } { x^2 }  ~+~
+		\frac{1}{1 \,+\, x} \rgr
+	~~+
+	\\[2mm]
+%
+\notag
+	&
+	~~+~~
+	\frac{1}{4}\,\Box\,\log |\sqrt{2}\sigma|^2 \cdot
+	\frac{ (1 - x^2) \ln (1 + x) \,-\, x } { x^2 }
+	~~-
+	\\[3mm]
+%
+\notag
+	&
+	~~-~~
+	2\,\frac{ F_{03} \big( i\sqrt{2}\sigma\ov\lambda{}_R\lambda_L ~-~
+			       i\sqrt{2}\,\ov{\sigma\lambda}{}_L\lambda_R \big) }
+		{ \big|\sqrt{2}\sigma\big|^4 }\,
+	\frac{ \ln (1 + x) \,-\, x } { x^2 }\,.
+\end{align}
+	Comparing Eqs \eqref{L2d} and \eqref{L0} we notice that the effect of adding 
+	the supersymmetric series to Eq.~\eqref{L0} is the multiplication of all terms 
+	by certain functions of $ x $.
+	In fact, the whole expression \eqref{L0}
+	is the leading order approximation (or subleading for some of the terms) in $ x $ of 
+	the two-derivative Langrangian \eqref{L2d}.
+
+	Now we exclude the auxiliary field $ D $ to obtain the effective action 
+	as a function of $ \sigma $ only.
+	Due to the very complicated dependence of the action \eqref{L2d} on $ D $, we can only do so 
+	with the accuracy of keeping up to two space-time derivatives.
+	In order to make the procedure of resolution of $ D $ easier, we switch to using the variable $ x $.
+	The Lagrangian \eqref{L2d} can be split into three pieces:
+\beq
+\label{Lpert}
+	\cell    ~~=~~    \cell_{(0)}(x)    ~~+~~    \cell_{(1)}(x)    ~~+~~    \cell_{(2)}(x)\,,
+\eeq
+	each explicitly containing, correspondingly, none, one and two space-time derivatives.
+	In particular, 
+\beq
+	\frac{4\pi}{N}\, \cell_{(0)}(x)    ~~=~~
+	\frac{ \big|\p_\mu \sigma\big|^2 }
+	{ \big|\sqrt{2}\sigma\big|^2 }
+	~~-~~
+	F_{03}\, \log\, \frac{\sqrt{2}\sigma}{\sqrt{2}\ov\sigma}
+	~~+~~
+	\frac{4\pi}{N}\, V_\text{eff}(x)\,.
+\eeq
+	Although this expression actually does contain space-time derivatives in the kinetic term for $ \sigma $
+	and in the anomaly term, the latter terms are independent of $ x $ and are unaltered during the
+	course of resolution of $ x $.
+	The first-order part $ \cell_{(1)}(x) $ only includes the term 
+	on the fourth line in \eqref{L2d}, {\it i.e.} the Yukawa-like coupling.
+	Each part in the expansion \eqref{Lpert}, besides the explicit derivatives, will also contain derivatives
+	implictly, via $ x $.
+	More specifically, we split the solution (to be found) of the equations of motion as,
+\beq
+	x    ~~=~~    x_0    ~~+~~    x_1    ~~+~~    ...\,.
+\eeq
+	Expanding the Lagrangian perturbatively in the number of space-time derivatives, and using the equation of motion for $ x $,
+	one can show that to the second order in space-time derivatives the Lagrangian is
+\beq
+\label{Lx}
+	\cell_\text{two deriv}(\sigma)    ~~=~~    
+		\cell_{(0)}(x_0)    ~~+~~    \cell_{(1)}(x_0)    ~~+~~    \cell_{(2)}(x_0)    
+	~~-~~	\frac{1}{2}\, \frac{\p^2 \cell_{(0)}}{\p x^2}\bigg|_{x_0} \!\!\cdot x_1^2\,.
+\eeq
+	Here $ x_0 $ is the minimum of the potential $ V_\text{eff}(x) $, 
+\beq
+	x_0    ~~=~~    \frac{ 1 \,-\, \big|\sqrt{2}\sigma\big|^2 }{ \big|\sqrt{2}\sigma\big|^2 }\,,
+\eeq
+	while $ x_1 $ is
+\beq
+	x_1    ~~=~~    -\, \frac{\p \cell_{(1)}}{\p x}(x_0) \lgr \frac{\p^2 \cell_{(0)}}{\p x^2}(x_0)\rgr^{-1}.
+\eeq
+	Higher terms in $ x $ are not needed for our purposes.
+	It is only due to the presence of the Yukawa-like coupling in Eq.~\eqref{L2d} --- which effectively is 
+	a one-derivative term --- that the expression \eqref{Lx} includes the last term depending on $ x_1^2 $.
+	That term, however, is important as it modifies the coefficient of the quartic fermionic coupling in Eq.~\eqref{L2d}.
+
+	It is now straightforward to calculate expression \eqref{Lx}. 
+	For the sake of presenting the results, it is helpful to introduce a variable $ r $,
+\beq
+	r    ~~=~~    \big|\sqrt{2}\sigma\big|^2
+\eeq
+	and a function $ v_\text{eff}(r) $,
+\beq
+	v_\text{eff}(r)    ~~=~~    \frac{4\pi}{N}\, V_\text{eff}(\sigma)    ~~=~~    r\, \ln r  ~~+~~  1  ~~-~~  r\,.
+\eeq
+	The result for Eq.~\eqref{Lx} can now be given as,
+\begin{align}
+%
+\notag
+	& \frac{4\pi}{N}\, \cell_\text{two deriv}(\sigma, A_\mu, \lambda)    ~~=~~  
+	\\[2mm]
+%
+\notag
+	& ~~=~~
+	\frac{ \big|\p_\mu \sigma\big|^2 } r
+	~~-~~
+	F_{03}\, \log\, \frac{\sqrt{2}\sigma}{\sqrt{2}\ov\sigma}
+	~~+~~
+	v_\text{eff}(r)
+	~~-
+	\\[2mm]
+%
+\notag
+	&
+	~~+~~
+	2\, F_{03}^2
+	\lgr \frac{v_\text{eff}(r)}{(1 - r)^2}  ~-~  \frac{r}{4} \rgr
+	~~+~~
+	\lgr 
+		\ov\lambda{}_R\, i\overleftrightarrow{\md_L} \lambda_R  ~+~ 
+		\ov\lambda{}_L\, i\overleftrightarrow{\md_R} \lambda_L
+	\rgr
+	\frac{v_\text{eff}(r)}{(1 - r)^2}
+	~~+
+	\\[2mm]
+%
+\label{Lsigma}
+	&
+	~~+~~ 
+	2 \lgr
+		i\sqrt{2}\sigma\ov\lambda{}_R\lambda_L  ~+~  
+		i\sqrt{2}\,\ov{\sigma\lambda}{}_L\lambda_R
+	\rgr
+	\frac{1 - r}{r}\, \ln r
+	~~-
+	\\[2mm]
+%
+\notag
+	&
+	~~-~~
+	4\, \ov\lambda{}_R \lambda_L \ov\lambda{}_L \lambda_R
+	\lgr
+		\frac{v_\text{eff}(r)}{r\, (1 - r)^2}
+		~-~  \frac{1}{r}
+		~+~  \frac{r\, \big( 1 \,-\, r \,-\, \ln r \big)^2}{ (1 - r)^4 }
+	\rgr
+	~-
+	\\[2mm]
+%
+\notag
+	&
+	~~-~~
+	\frac{1}{4}\,\Box\,\ln r
+	\lgr
+		\frac{r\, v_\text{eff}(r)}{(1 - r)^2}  ~-~  \ln r
+	\rgr
+	~~+
+	\\[2mm]
+%
+\notag
+	&
+	~~+~~
+	2\, F_{03} \lgr 
+			i\sqrt{2}\sigma\ov\lambda{}_R\lambda_L ~-~
+			i\sqrt{2}\,\ov{\sigma\lambda}{}_L\lambda_R
+		   \rgr
+	\frac{v_\text{eff}(r)}{r\, (1 - r)^2}\,.
+\end{align}
+	Interestingly, most of the ``coefficients'' of the terms in the Lagrangian \eqref{Lsigma} contain 
+	the potential $ v_\text{eff}(r) $ in one or another form.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                   H E T E R O T I C   D E F O R M A T I O N                  %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Heterotic Deformation}
+\label{shet}
+
+	The heterotic deformation is introduced using \ntwoo superfields and
+	essentially follows the guidelines of \cite{EdTo}.
+	Before describing this deformation in detail we need to introduce the necessary
+	superfield machinery consistent with our notations.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                     N = ( 0 , 2 )   S U P E R F I E L D S                    %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\boldmath{\ntwoo} superfields}
+
+	We define \ntwoo superspace via reduction of \ntwot superspace by putting
+\beq
+	\theta_L    ~~=~~    \ov\theta{}_L    ~~=~~    0\,.
+\eeq
+	Each chiral and twisted-chiral \ntwot superfield this way splits into two \ntwoo superfields.
+	While chiral superfields are usually described as being dependent on
+	a ``holomorphic'' variable $ y^\mu $,
+\beq
+	y^\mu    ~~=~~    x^\mu    ~~+~~    i\,\ov{\theta\sigma}{}_\mu\theta\,,
+\eeq
+	and twisted-chiral as dependent on a twisted variable $ \wt y{}^\mu $,
+\beq
+	\wt y{}^\mu    ~~=~~    x^\mu    ~~+~~    i\,\ov{\theta\wt\sigma}{}_\mu\theta\,,
+\eeq
+	(see Appendix~\ref{app:notations} for details and notations), 
+	the distinction between the two variables vanishes upon reduction to \ntwoo superspace.
+	As a result, \ntwoo superspace defines only one kind of holomorphic superfields --- 
+	chiral \ntwoo superfields, which depend upon the reduced variables $ \upsilon^\mu $
+\begin{align}
+%
+\notag
+	\upsilon^0 &    ~~=~~    x^0  ~~+~~  i\,\ov\theta{}_R\theta_R
+	\\[2mm]
+%
+	\upsilon^3 &    ~~=~~    x^3  ~~+~~  i\,\ov\theta{}_R\theta_R\,.
+\end{align}
+
+	To make a distinction with \ntwot superfields, we denote the \ntwoo superfields
+	by symbols with a hat on top --- $ \hsigma $, $ \hxi $, {\it etc}.
+	Of immediate interest to us is the {\it positional} superfield $ Z(y) $ which splits
+	into two \ntwoo superfields --- $ \hz(\upsilon) $ and $ \hzeta(\upsilon) $,
+\begin{align}
+%
+\notag
+	\hz(\upsilon) &    ~~=~~    z  ~~-~~  \sqrt{2}\,\theta_R\,\zeta_L\,,
+	&
+	\hzeta(\upsilon) &    ~~=~~    \zeta_R  ~~+~~  \sqrt{2}\,\theta_R\,\cfe\,,
+	\\[2mm]
+%
+	\hbz(\ov\upsilon) &    ~~=~~    \ov z  ~~+~~  \sqrt{2}\,\ov{\theta_L \zeta}{}_L\,,
+	&
+	\hbzeta(\ov\upsilon) &    ~~=~~    \ov\psi{}_R  ~~+~~  \sqrt{2}\,\ov{\theta_R \cfe}\,,
+\end{align}
+	and the twisted chiral superfield $ \Sigma(\wt y) $, which splits into 
+	$ \hsigma(\upsilon) $ and $ \hlambda(\upsilon) $,
+\begin{align}
+%
+\notag
+	\hsigma(\upsilon) &    ~~=~~    \sigma  ~~-~~  \sqrt{2}\,\theta_R\,\ov\lambda{}_L
+	&
+	\hlambda(\upsilon) &    ~~=~~    \lambda_R  ~~+~~  i\,\theta_R\,(iD \,+\, F_{03})
+	\\[2mm]
+%
+	\hbsigma(\ov\upsilon) &    ~~=~~    \ov\sigma  ~~+~~  \sqrt{2}\,\ov\theta{}_R\,\lambda_L
+	&
+	\hblambda(\ov\upsilon) &    ~~=~~    \ov\lambda{}_R  ~~+~~  i\,\ov\theta{}_R\,(iD \,-\, F_{03})\,.
+\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%         C O N S T R U C T I O N   O F   T H E   D E F O R M A T I O N        %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Construction of the deformation}
+
+	The heterotic deformation is introduced using the fermionic translational degree
+	of freedom $ \zeta_R $, which, as we just described, sits in the 
+	supermultiplet $ \hzeta $.
+	The first thing this new degree of freedom needs is the kinetic term
+\beq
+	\int\, d^2\theta_R\,\, \hzeta_R\, \hbzeta_R    ~~=~~    \ov\zeta{}_R\,i\p_L \zeta_R  ~~+~~  \ov\cfe\,\cfe\,.
+\eeq
+
+	In the \ntwoo space, a superpotential, as a holomorphic function $ J(\hsigma) $ is constructed 
+	using an arbitrary fermionic multiplet. It is obvious that for our purposes $ \hzeta $ is the
+	right fermionic superfield, giving rise to terms like
+\beq
+	\int d\theta_R\,\, \hzeta\, J(\hsigma)\,.
+\eeq
+	As for the superpotential function $ J(\hsigma) $ itself, it comes from the four-dimensional
+	deformation superpotential --- if applicable --- taken as a function of $ \hsigma $,
+\beq
+	J(\hsigma)    ~~=~~    \frac{\p\, \cw_\text{4-d}(\hsigma)}{\p \hsigma}\,.
+\eeq
+	Remind, that originally $ \cw_\text{4-d} $ is a function of $ \ca $. 
+	We stick to the quadratic deformation, generically without making references to the four-dimensional
+	bulk theory, in which case
+\beq
+	J(\sqrt{2}\hsigma)    ~~=~~    \delta\cdot \sqrt{2}\hsigma\,,
+\eeq
+	where $ \delta $ is the parameter of deformation.
+
+	Altogether, the part of the Lagrangian involving the supertranslational sector is
+\beq
+	\cell_\text{het}    ~~=~~
+	\int\, d^2\theta_R\,\, \hzeta_R\, \hbzeta_R
+	~~-~~
+	i\, \int d\theta_R\,\, \hzeta\cdot J(\sqrt{2}\hsigma)
+	~~-~~
+	i\, \int d\ov\theta{}_R\,\, \hbzeta\cdot \ov J(\sqrt{2}\hbsigma)\,.
+\eeq
+	In components, this is
+\begin{align}
+%
+\notag
+	\cell_\text{het} &   ~~=~~
+		\ov\zeta{}_R\, i\p_L \zeta_R  ~~+~~  \ov\cfe\,\cfe  
+		~~-~~  i\,\sqrt{2}\delta\, \cfe \cdot \sqrt{2}\sigma
+		~~-~~  i\,\sqrt{2}\ov\delta\, \ov\cfe \cdot \sqrt{2}\ov\sigma
+		~~+~~
+	\\[2mm]
+%
+		&
+		~~+~~  i\,\sqrt{2}\delta \cdot \sqrt{2}\ov\lambda{}_L \zeta_R
+		~~+~~  i\,\sqrt{2}\ov\delta \cdot \sqrt{2}\ov\zeta{}_R \lambda_L\,.
+\end{align}
+	With the auxiliary field $ \cfe $ excluded, this produces a quadratic potential
+	for $ \sigma $,
+\beq
+	\cell_\text{het}   ~~=~~
+		\ov\zeta{}_R\, i\p_L \zeta_R
+		~~+~~  |\sqrt{2}\delta|^2\, \big|\sqrt{2}\sigma\big|^2
+		~~+~~  i\,\sqrt{2}\delta \cdot \sqrt{2}\ov\lambda{}_L \zeta_R
+		~~+~~  i\,\sqrt{2}\ov\delta \cdot \sqrt{2}\ov\zeta{}_R \lambda_L\,.
+\eeq
+	Since the introduction of this deformation did not involve
+	the variables $ n^l $ or $ \xi^l $ of the original \cpn theory,
+	the above terms are just added on top of \eqref{Lsigma}
+	(paying due respect to the factor $ N/4\pi $ in the latter equation) to produce
+	the solution of the deformed theory.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                          T W I S T E D   M A S S E S                         %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Twisted Masses}
+\label{stwist}
+	
+	Generalization to the theory with twisted masses is quite trivial. 
+	In essense, every instance of $ \sigma $ in the Lagrangian is replaced
+	with the difference $ \sigma - m_k $.
+	Since all masses are generically different, the overall factor $ N/4\pi $ is
+	replaced by $ 1/4\pi $ and a sum over $ k $.
+
+	It is straightforward to write a superfield generalization of this.
+	In Eq.~\eqref{Lsuper}, every occurence of superfield $ \Sigma $ 
+	should be replaced with $ \Sigma - m_k $, and, in addition,
+	we have to introduce $ N $ fields $ S_k $.
+	It is of absolutely no effort to also include the heterotic deformation
+	(for which, however, replacement $ \sigma \,\to\, \sigma - m_k $ is not done).
+	The overall supersymmetric form of the effective Lagrangian with 
+	twisted masses and heterotic deformation is,
+\begin{align}
+%
+\notag
+	& 4\pi\, \cell    ~~=~~     
+			-\, \sum_k\, \Bigg\lgroup\,
+			\int\, d^4\theta\, \frac{1}{2}\, \Big| \ln \big(\sqrt{2}\Sigma \,-\, m_k \big)\, \Big|^2
+			~~+
+	\\[2mm]
+%
+\notag
+			&
+			+~~
+			i\, \int\, d^2\tilde\theta 
+			\lgr
+			\big( \sqrt{2}\Sigma \,-\, m_k \big)\, \ln \big( \sqrt{2}\Sigma \,-\, m_k \big)  ~-~ 
+					\big( \sqrt{2}\Sigma \,-\, m_k \big)
+			\rgr \!\!
+			~~+
+	\\[2mm]
+%
+\label{hetmass}
+			&
+			+~~ 
+			\frac{1}{4}\, \int\, d^4\theta\, \ln\, \big( \sqrt{2}\ov\Sigma \,-\, \ov m{}_k \big)\, \times
+	\\[1mm]
+%
+\notag
+			&
+			\qquad\qquad~
+			\times
+			\bigg\lgroup \Big( 1 \,+\, \frac{\sqrt{2}\Sigma \,-\, m_k}{S_k} \Big)^2\,
+				\ln \left(\, 1 \,+\, \frac{S_k}{\sqrt{2}\Sigma \,-\, m_k} \,\right) ~-~
+				\frac{\sqrt{2}\Sigma \,-\, m_k}{S_k} \bigg\rgroup \Bigg\rgroup \!\!
+			~~+
+	\\[2mm]
+%
+\notag
+			&
+			+~~
+			4\pi\, \int\, d^2\theta_R\,\, \hzeta_R\, \hbzeta_R
+			~~-~~
+			4\pi i\, \int d\theta_R\,\, \hzeta\cdot J(\sqrt{2}\hsigma)
+			~~+~~
+			\text{h.c.}
+\end{align}
+	Hermitean conjugate is understood here to be added only to those terms that require it
+	(in particular, the first term in Eq.~\eqref{hetmass} does not need a conjugate).
+	We have introduced the obvious notation,
+\beq
+	S_k    ~~=~~    \frac{i}{2}\, \ov D{}_R D_L\, \ln \big( \sqrt{2}\ov\Sigma \,-\, \ov m{}_k \big)\,,
+	\qquad\qquad
+	\ov S{}_k    ~~=~~    \frac{i}{2}\, \ov D{}_L D_R\, \ln \big( \sqrt{2}\Sigma \,-\, m_k \big)\,.
+\eeq
+
+
+\pagebreak
+\begin{itemize}
+\item
+	Confirm the form of the long derivatives
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                              C O N C L U S I O N                             %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions}
+\label{sfinal}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                         A C K N O W L E D G M E N T S                        %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Acknowledgments}
+
+We are grateful to Sergey Gukov for stimulating questions  which motivated us to carry out this work.
+
+	The work  of M.S. is supported in part by DOE grant DE-SC0011842. 
+	The work of A.Y. was  supported 
+	by  FTPI, University of Minnesota, 
+	by RFBR Grant No. 13-02-00042a 
+	and by Russian State Grant for 
+	Scientific Schools RSGSS-657512010.2.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                              A P P E N D I C E S                             %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\appendix
+\setcounter{equation}{0}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                               N O T A T I O N S                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Notations}
+\label{app:notations}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                     T W I S T E D   S U P E R F I E L D S                    %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Twisted superfields}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                     N = ( 0 , 2 )   S U P E R F I E L D S                    %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\boldmath{\ntwoon} superfields}
+	Chiral superfields $ \Phi(y) $ split into \ntwoo superfields 
+	$ \hphi(\upsilon) $ and $ \hxi(\upsilon) $,
+\begin{align}
+%
+\notag
+	\Phi(y) &    ~~\longrightarrow~~    \hphi(\upsilon)  ~~+~~  \sqrt{2}\,\theta_L\,\hxi(\upsilon)\,,
+	\\[2mm]
+%
+	\ov\Phi(\ov y) &    ~~\longrightarrow~~    \hbphi(\ov\upsilon)  ~~-~~  \sqrt{2}\,\ov\theta{}_L\,\hbxi(\ov\upsilon)\,,
+\end{align}
+	while twisted-chiral superfields $ \Sigma(\wt y) $ split into 
+	$ \hsigma(\upsilon) $ and $ \hlambda(\upsilon) $,
+\begin{align}
+%
+\notag
+	\Sigma(\wt y) &    ~~\longrightarrow~~    \hsigma(\upsilon)  ~~+~~  \sqrt{2}\,\ov\theta{}_L\,\hlambda(\upsilon)\,,
+	\\[2mm]
+%
+	\ov\Sigma(\ov{\wt y}) &    ~~\longrightarrow~~    \hbsigma(\ov\upsilon)  ~~-~~  \sqrt{2}\,\theta_L\,\hblambda(\upsilon)\,.
+\end{align}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%           E X P A N S I O N   O F   E F F E C T I V E   A C T I O N          %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Component Expansion of the Effective Action}
+\label{app:expansion}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                            B I B L I O G R A P H Y                           %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\small
+\begin{thebibliography}{99}
+
+  \bibitem{0}
+E.~Witten,
+ {\em Instantons, the Quark Model, and the 1/n Expansion,}
+  Nucl.\ Phys.\ B {\bf 149}, 285 (1979).
+  %%CITATION = NUPHA,B149,285;%%
+  %678 citations counted in INSPIRE as of 15 Aug 2014
+  
+   \bibitem{1p}
+   A.~D'Adda, P.~Di Vecchia and M.~Luscher,
+{\em Confinement and Chiral Symmetry Breaking in CP(N-1) Models with Quarks,}
+  Nucl.\ Phys.\ B {\bf 152}, 125 (1979).
+  %%CITATION = NUPHA,B152,125;%%
+  %354 citations counted in INSPIRE as of 18 Aug 2014
+  
+    \bibitem{SYhet}
+    M.~Shifman and A.~Yung,
+{\em Large-N Solution of the Heterotic N=(0,2) Two-Dimensional CP(N-1) Model,}
+  Phys.\ Rev.\  D {\bf 77}, 125017 (2008)
+  [arXiv:0803.0698 [hep-th]].
+  %%CITATION = PHRVA,D77,125017;%%
+
+  \bibitem{1}
+  A.~D'Adda, A.~C.~Davis, P.~Di Vecchia and P.~Salomonson,
+ {\em An Effective Action for the Supersymmetric {CP}${(N-1)}$ Model,}
+  Nucl.\ Phys.\ B {\bf 222}, 45 (1983).
+  %%CITATION = NUPHA,B222,45;%%
+  %63 citations counted in INSPIRE as of 15 Aug 2014
+  
+    \bibitem{2}
+    S.~Cecotti and C.~Vafa,
+  {\em On classification of ${\mathcal N}=2$ supersymmetric theories,}
+  Commun.\ Math.\ Phys.\  {\bf 158}, 569 (1993)
+  [hep-th/9211097].
+  %%CITATION = HEP-TH/9211097;%%
+  %206 citations counted in INSPIRE as of 15 Aug 2014
+  
+      \bibitem{3}
+      E.~Witten,
+{\em Phases of ${\mathcal N}=2$ theories in two-dimensions,}
+  Nucl.\ Phys.\ B {\bf 403}, 159 (1993)
+  [hep-th/9301042].
+  %%CITATION = HEP-TH/9301042;%%
+  %898 citations counted in INSPIRE as of 15 Aug 2014
+  
+%%  
+  
+  \bibitem{Veneziano}
+  G.~Veneziano and S.~Yankielowicz,
+  {\em An Effective Lagrangian for the Pure ${\mathcal N}=1$ Supersymmetric Yang-Mills Theory,}
+  Phys.\ Lett.\ B {\bf 113} (1982) 231.
+  %%CITATION = PHLTA,B113,231;%%
+  %645 citations counted in INSPIRE as of 18 Aug 2014
+  
+   \bibitem{BSYhet}
+  P.~A.~Bolokhov, M.~Shifman and A.~Yung,
+  {\em Large-N Solution of the Heterotic CP(N-1) Model with Twisted Masses,}
+  Phys.\ Rev.\ D {\bf 82}, 025011 (2010)
+  [arXiv:1001.1757 [hep-th]].
+  %%CITATION = ARXIV:1001.1757;%%
+  %9 citations counted in INSPIRE as of 18 Aug 2014
+
+  \bibitem{EdTo}
+   M.~Edalati and D.~Tong,
+ {\em Heterotic vortex strings,}
+  JHEP {\bf 0705}, 005 (2007)
+  [arXiv:hep-th/0703045].
+  %%CITATION = JHEPA,0705,005;%%
+  
+  \bibitem{SY1}
+  M.~Shifman and A.~Yung,
+  {\em Heterotic Flux Tubes in ${\mathcal N}=2$ SQCD with ${\mathcal N}=1$ Preserving Deformations,}
+  Phys.\ Rev.\  D {\bf 77}, 125016 (2008)
+  [arXiv:0803.0158 [hep-th]].
+  %%CITATION = PHRVA,D77,125016;%%
+
+  \bibitem{BSY1}
+  P.~A.~Bolokhov, M.~Shifman and A.~Yung,
+  {\em Description of the Heterotic String Solutions in U(N) SQCD,}
+  Phys. \ Rev. \ D {\bf 79}, 085015 (2009) (Erratum: Phys. Rev. D 80, 049902 (2009))
+  [arXiv:0901.4603 [hep-th]].
+  %%CITATION = ARXIV:0901.4603;%%
+%%  
+%%  \bibitem{BSY2}
+%%  P.~A.~Bolokhov, M.~Shifman and A.~Yung,
+%%  %``Description of the Heterotic String Solutions in the M Model,''
+%%  Phys. \ Rev. \ D {\bf 79}, 106001 (2009) (Erratum: Phys. Rev. D 80, 049903 (2009))
+%%  [arXiv:0903.1089 [hep-th]].
+%%  %%CITATION = ARXIV:0903.1089;%%  
+%%  
+
+  \bibitem{BSY3}
+  P.~A.~Bolokhov, M.~Shifman and A.~Yung,
+  %``Heterotic N=(0,2) CP(N-1) Model with Twisted Masses,''
+  Phys.\ Rev.\  D {\bf 81}, 065025 (2010)
+  [arXiv:0907.2715 [hep-th]].
+  %%CITATION = PHRVA,D81,065025;%%
+
+%%  
+%%  \bibitem{orco}
+%%  E.~Witten,
+%%  %``A Supersymmetric Form Of The Nonlinear Sigma Model In Two-Dimensions,''
+%%  Phys.\ Rev.\  D {\bf 16}, 2991 (1977);
+%%  %%CITATION = PHRVA,D16,2991;%%
+%%  P.~Di Vecchia and S.~Ferrara,
+%%  %``Classical Solutions In Two-Dimensional Supersymmetric Field Theories,''
+%%  Nucl.\ Phys.\  B {\bf 130}, 93 (1977).
+%%  %%CITATION = NUPHA,B130,93;%%
+%%
+%%  \bibitem{Bruno}
+%%  B.~Zumino,
+%%  %``Supersymmetry And Kahler Manifolds,''
+%%  Phys.\ Lett.\  B {\bf 87}, 203 (1979).
+%%  %%CITATION = PHLTA,B87,203;%%
+%%
+%%  \bibitem{rev1}
+%%  V.~A.~Novikov, M.~A.~Shifman, A.~I.~Vainshtein and V.~I.~Zakharov,
+%%  %``Two-Dimensional Sigma Models: Modeling Nonperturbative Effects Of Quantum
+%%  %Chromodynamics,''
+%%  Phys.\ Rept.\  {\bf 116}, 103 (1984).
+%%  %%CITATION = PRPLC,116,103;%%
+%%   
+%%  \bibitem{rev2} 
+%%  A.~M.~Perelomov,
+%%  %``SUPERSYMMETRIC CHIRAL MODELS: GEOMETRICAL ASPECTS,''
+%%  Phys.\ Rept.\  {\bf 174}, 229 (1989).
+%%  %%CITATION = PRPLC,174,229;%%
+%%  
+%%  \bibitem{WI}
+%%  E.~Witten,
+%%  %``Constraints On Supersymmetry Breaking,''
+%%  Nucl.\ Phys.\  B {\bf 202}, 253 (1982).
+%%  %%CITATION = NUPHA,B202,253;%%
+%%  
+%%  \bibitem{twisted}
+%%  L.~Alvarez-Gaum\'{e} and D.~Z.~Freedman,
+%%  %``Potentials For The Supersymmetric Nonlinear Sigma Model,''
+%%  Commun.\ Math.\ Phys.\  {\bf 91}, 87 (1983);
+%%  %%CITATION = CMPHA,91,87;%%
+%%  S.~J.~Gates,
+%%  %``Superspace Formulation Of New Nonlinear Sigma Models,''
+%%  Nucl.\ Phys.\ B {\bf 238}, 349 (1984);
+%%  %%CITATION = NUPHA,B238,349;%%
+%%  S.~J.~Gates, C.~M.~Hull and M.~Ro\v{c}ek,
+%%  %``Twisted Multiplets And New Supersymmetric Nonlinear Sigma Models,''
+%%  Nucl.\ Phys.\ B {\bf 248}, 157 (1984).
+%%  %%CITATION = NUPHA,B248,157;%%
+%%
+%%  \bibitem{BelPo}
+%%  A.~M.~Polyakov,
+%%  %``Interaction Of Goldstone Particles In Two-Dimensions. Applications To
+%%  %Ferromagnets And Massive Yang-Mills Fields,''
+%%  Phys.\ Lett.\  B {\bf 59}, 79 (1975).
+%%  %%CITATION = PHLTA,B59,79;%%
+%%  
+%%  \bibitem{adam}
+%%  A.~Ritz, M.~Shifman and A.~Vainshtein,
+%%  %``Counting domain walls in N = 1 super Yang-Mills,''
+%%  Phys.\ Rev.\  D {\bf 66}, 065015 (2002)
+%%  [arXiv:hep-th/0205083].
+%%  %%CITATION = PHRVA,D66,065015;%%
+%%  
+%%  \bibitem{WessBagger}
+%%  J. Wess and J. Bagger, {\em Supersymmetry and Supergravity}, Second Edition,
+%%  Princeton University Press, 1992.
+%%
+%%  \bibitem{Helgason}
+%%  S. Helgason, {\sl Differential geometry, Lie groups and symmetric spaces},
+%%  Academic Press, New York, 1978.
+%%  
+%%  \bibitem{Dor}
+%%  N.~Dorey,
+%%  %``The BPS spectra of two-dimensional
+%%  %supersymmetric gauge theories
+%%  %with  twisted mass terms,''
+%%  JHEP {\bf 9811}, 005 (1998) [hep-th/9806056].
+%%  %%CITATION = HEP-TH 9806056;%%
+%%
+%%  \bibitem{Witten:2005px}
+%%  E.~Witten,
+%%  {\em Two-dimensional models with (0,2) supersymmetry: Perturbative aspects,}
+%%  arXiv:hep-th/0504078.
+%%  %%CITATION = HEP-TH/0504078;%%
+%%  
+%%  \bibitem{GSYphtr}
+%%  A.~Gorsky, M.~Shifman and A.~Yung,
+%%   %``Higgs and Coulomb/confining phases in "twisted-mass" deformed \cpn model,''
+%%  Phys.\ Rev.\ D {\bf 73}, 065011 (2006)
+%%  [hep-th/0512153].
+%%
+%%  \bibitem{Coleman}
+%%  S.~R.~Coleman,
+%%  %``More About The Massive Schwinger Model,''
+%%  Annals Phys.  {\bf 101}, 239 (1976).
+%%
+%%  \bibitem{GSY05}
+%%  A.~Gorsky, M.~Shifman and A.~Yung,
+%%   %``Non-Abelian Meissner effect in Yang-Mills theories at weak
+%%  %coupling,''
+%%  Phys.\ Rev.\ D {\bf 71}, 045010 (2005)
+%%  [hep-th/0412082].
+%%  %%CITATION = HEP-TH 0412082;%%
+%%
+%%  \bibitem{Ferrari}
+%%  F.~Ferrari,
+%%  % ``LARGE N AND DOUBLE SCALING LIMITS IN TWO-DIMENSIONS.''
+%%  JHEP {\bf 0205} 044 (2002)
+%%  [hep-th/0202002].
+%%
+%%  \bibitem{Ferrari2}
+%%  F.~Ferrari,
+%%  %'' NONSUPERSYMMETRIC COUSINS OF SUPERSYMMETRIC GAUGE THEORIES:
+%%  %QUANTUM SPACE OF PARAMETERS AND DOUBLE SCALING LIMITS.''
+%%   Phys. Lett. {\bf B496} 212 (2000)
+%%  [hep-th/0003142];
+%%  %``A model for gauge theories with Higgs fields,''
+%%  JHEP {\bf 0106}, 057 (2001)
+%%  [hep-th/0102041].
+%%  %%CITATION = HEP-TH 0102041;%%
+%%
+%%  \bibitem{AdDVecSal}
+%%  A.~D'Adda, A.~C.~Davis, P.~DiVeccia and P.~Salamonson,
+%%  %"An effective action for the supersymmetric CP$^{n-1}$ models,"
+%%  Nucl.\ Phys.\ {\bf B222} 45 (1983).
+%%
+%%  \bibitem{ChVa}
+%%  S.~Cecotti and C. Vafa,
+%%  %"On classification of \ntwo supersymmetric theories,"
+%%  Comm. \ Math. \ Phys. \ {\bf 158} 569 (1993)
+%%  [hep-th/9211097].
+%%
+%%  \bibitem{HaHo}
+%%  A.~Hanany and K.~Hori,
+%%  %``Branes and N = 2 theories in two dimensions,''
+%%  Nucl.\ Phys.\  B {\bf 513}, 119 (1998)
+%%  [arXiv:hep-th/9707192].
+%%  %%CITATION = NUPHA,B513,119;%%
+%%
+%%  \bibitem{AD}
+%%  P. C.~Argyres and M. R.~Douglas,
+%%  %``New Phenomena in SU(3) Supersymmetric Gauge Theory'' 
+%%  Nucl. \ Phys. \ {\bf B448}, 93 (1995)   
+%%  [arXiv:hep-th/9505062].
+%%  %%CITATION = NUPHA,B448,93;%%
+%%  
+%%  \bibitem{APSW}
+%%  P. C. Argyres, M. R. Plesser, N. Seiberg, and E. Witten,
+%%  %``New N=2 Superconformal Field Theories in Four Dimensions''
+%%  Nucl. \ Phys.  \ {\bf B461}, 71 (1996) 
+%%  [arXiv:hep-th/9511154].
+%%  %%CITATION = NUPHA,B461,71;%%
+%%
+%%  \bibitem{SYrev}
+%%  M.~Shifman and A.~Yung,
+%%  %{\sl Supersymmetric Solitons,}
+%%  Rev.\ Mod.\ Phys. {\bf 79} 1139 (2007)
+%%  [arXiv:hep-th/0703267].
+%%  %%CITATION = HEP-TH/0703267;%%
+%%
+%%  \bibitem{Tonghetdyn}
+%%  D.~Tong,
+%%  %``The quantum dynamics of heterotic vortex strings,''
+%%  JHEP {\bf 0709}, 022 (2007)
+%%  [arXiv:hep-th/0703235].
+%%  %%CITATION = JHEPA,0709,022;%%
+%%  
+%%  \bibitem{VYan}
+%%  G.~Veneziano and S.~Yankielowicz,
+%%  %``An Effective Lagrangian For The Pure N=1 Supersymmetric Yang-Mills
+%%  %Theory,''
+%%  Phys.\ Lett.\  B {\bf 113}, 231 (1982).
+%%  %%CITATION = PHLTA,B113,231;%%
+%%  
+%%  \bibitem{ls}
+%%  A.~Losev and M.~Shifman,
+%%  %``N = 2 sigma model with twisted mass and superpotential: Central charges
+%%  %and solitons,''
+%%  Phys.\ Rev.\  D {\bf 68}, 045006 (2003)
+%%  [arXiv:hep-th/0304003].
+%%  %%CITATION = PHRVA,D68,045006;%%
+%%  
+%%  \bibitem{ls1}
+%%  M.~Shifman, A.~Vainshtein and R.~Zwicky,
+%%  %``Central charge anomalies in 2D sigma models with twisted mass,''
+%%  J.\ Phys.\ A  {\bf 39}, 13005 (2006)
+%%  [arXiv:hep-th/0602004].
+%%  %%CITATION = JPAGB,A39,13005;%
+%%  
+%%  \bibitem{SYneww}
+%%  M.~Shifman and A.~Yung,
+%%  %``N=(0,2) Deformation of the N=(2,2) Wess-Zumino Model in Two Dimensions,''
+%%  Phys.\ Rev.\  D {\bf 81}, 105022 (2010)
+%%  [arXiv:0912.3836 [hep-th]].
+%%  %%CITATION = PHRVA,D81,105022;%%
+%%  
+%%  \bibitem{D1}
+%%  J.~Distler and S.~Kachru,
+%%  %``(0,2) Landau-Ginzburg theory,''
+%%  Nucl.\ Phys.\  B {\bf 413}, 213 (1994)
+%%  [arXiv:hep-th/9309110].
+%%  %%CITATION = NUPHA,B413,213;%%
+%%  
+%%  \bibitem{D2}
+%%  T.~Kawai and K.~Mohri,
+%%  %``Geometry Of (0,2) Landau-Ginzburg Orbifolds,''
+%%  Nucl.\ Phys.\  B {\bf 425}, 191 (1994)
+%%  [arXiv:hep-th/9402148].
+%%  %%CITATION = NUPHA,B425,191;%%
+%%  
+%%  \bibitem{D3}
+%%  I.~V.~Melnikov,
+%%  %``(0,2) Landau-Ginzburg Models and Residues,''
+%%  JHEP {\bf 0909}, 118 (2009)
+%%  [arXiv:0902.3908 [hep-th]].
+%%  %%CITATION = JHEPA,0909,118;%%
+%%  
+%%  \bibitem{Shifman:2009ay}
+%%  M.~Shifman and A.~Yung,
+%%  %``Crossover between Abelian and non-Abelian confinement in N=2 supersymmetric
+%%  %QCD,''
+%%  Phys.\ Rev.\  D {\bf 79}, 105006 (2009)
+%%  [arXiv:0901.4144 [hep-th]].
+%%  %%CITATION = PHRVA,D79,105006;%%
+%%
+%%  \bibitem{Tadpoint}
+%%  D.~Tong,
+%%  %``Superconformal  vortex strings,''
+%%  JHEP {\bf 0612}, 051 (2006)
+%%  [arXiv:hep-th/0610214].
+%%
+%%  \bibitem{SMMS}
+%%  A.~Migdal and M.~Shifman,
+%%  %``Dilaton Effective Lagrangian In Gluodynamics,''
+%%  Phys.\ Lett.\  B {\bf 114}, 445 (1982).
+%%  %%CITATION = PHLTA,B114,445;%%
+%%  
+%%  \bibitem{Kos}
+%%  A.~Kovner and M.~A.~Shifman,
+%%  %``Chirally symmetric phase of supersymmetric gluodynamics,''
+%%  Phys.\ Rev.\  D {\bf 56}, 2396 (1997)
+%%  [arXiv:hep-th/9702174].
+%%  %%CITATION = PHRVA,D56,2396;%%
+%%
+\end{thebibliography}
+
+\end{document}

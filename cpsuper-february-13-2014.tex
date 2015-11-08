@@ -1,0 +1,188 @@
+\documentclass[12pt]{article}
+%\usepackage{geometry}
+\usepackage{epsfig}
+\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{cite}
+\usepackage{amsmath}
+
+%\usepackage{showlabels}
+
+\begin{document}
+
+%%%%%%Define some new commands and macros
+ \newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}} 
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\beqn}{\begin{eqnarray}}
+\newcommand{\eeqn}{\end{eqnarray}}
+\newcommand{\beas}{\begin{eqnarray*}}
+\newcommand{\eeas}{\end{eqnarray*}}
+\newcommand{\defi}{\stackrel{\rm def}{=}}
+\newcommand{\non}{\nonumber}
+\newcommand{\bquo}{\begin{quote}}
+\newcommand{\enqu}{\end{quote}}
+\newcommand{\qt}{\tilde q}
+\newcommand{\m}{\tilde m}
+\newcommand{\trho}{\tilde{\rho}}
+\newcommand{\tn}{\tilde{n}}
+\newcommand{\tN}{\tilde N}
+%\newcommand{\p}{\partial}
+\newcommand{\gsim}{\lower.7ex\hbox{$\;\stackrel{\textstyle>}{\sim}\;$}}
+\newcommand{\lsim}{\lower.7ex\hbox{$\;\stackrel{\textstyle<}{\sim}\;$}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% definitions
+
+
+
+
+\def\de{\partial}
+\def\Tr{ \hbox{\rm Tr}}
+\def\const{\hbox {\rm const.}}  
+\def\o{\over}
+\def\im{\hbox{\rm Im}}
+\def\re{\hbox{\rm Re}}
+\def\bra{\langle}\def\ket{\rangle}
+\def\Arg{\hbox {\rm Arg}}
+\def\Re{\hbox {\rm Re}}
+\def\Im{\hbox {\rm Im}}
+\def\diag{\hbox{\rm diag}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\QATOPD#1#2#3#4{{#3 \atopwithdelims#1#2 #4}}
+\def\stackunder#1#2{\mathrel{\mathop{#2}\limits_{#1}}}
+\def\stackreb#1#2{\mathrel{\mathop{#2}\limits_{#1}}}
+\def\Tr{{\rm Tr}}
+\def\res{{\rm res}}
+\def\Bf#1{\mbox{\boldmath $#1$}}
+\def\balpha{{\Bf\alpha}}
+\def\bbeta{{\Bf\beta}}
+\def\bgamma{{\Bf\gamma}}
+\def\bnu{{\Bf\nu}}
+\def\bmu{{\Bf\mu}}
+\def\bphi{{\Bf\phi}}
+\def\bPhi{{\Bf\Phi}}
+\def\bomega{{\Bf\omega}}
+\def\blambda{{\Bf\lambda}}
+\def\brho{{\Bf\rho}}
+\def\bsigma{{\bfit\sigma}}
+\def\bxi{{\Bf\xi}}
+\def\bbeta{{\Bf\eta}}
+\def\d{\partial}
+\def\der#1#2{\frac{\d{#1}}{\d{#2}}}
+\def\Im{{\rm Im}}
+\def\Re{{\rm Re}}
+\def\rank{{\rm rank}}
+\def\diag{{\rm diag}}
+\def\2{{1\over 2}}
+\def\ntwo{${\mathcal N}=2\;$}
+\def\nfour{${\mathcal N}=4\;$}
+\def\none{${\mathcal N}=1\;$}
+\def\ntwot{${\mathcal N}=(2,2)\;$}
+\def\ntwoo{${\mathcal N}=(0,2)\;$}
+\def\x{\stackrel{\otimes}{,}}
+
+\def\ba{\beq\new\begin{array}{c}}
+\def\ea{\end{array}\eeq}
+\def\be{\ba}
+\def\ee{\ea}
+\def\stackreb#1#2{\mathrel{\mathop{#2}\limits_{#1}}}
+
+%\def\theequation{\thesection.\arabic{equation}}
+
+
+
+%\def\baselinestretch{1.0}
+
+
+
+
+\def\Tr{{\rm Tr}}
+%%\newcommand{\ntwo}{${\mathcal N}=2\;$}
+%%\newcommand{\none}{${\mathcal N}=1\;$}
+\newcommand{\cpn}{CP$(N-1)\;$}
+\newcommand{\wcpn}{wCP$_{N,\tilde{N}}(N_f-1)\;$}
+\newcommand{\wcpd}{wCP$_{\tilde{N},N}(N_f-1)\;$}
+\newcommand{\vp}{\varphi}
+\newcommand{\pt}{\partial}
+\newcommand{\ve}{\varepsilon}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+\setcounter{footnote}0
+%\begin{titlepage}
+%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\vfill
+
+
+
+
+
+Our potential is 
+\beq
+V=\frac{N}{4\pi}\left\{-iD\ln{\frac{2|\sigma|}{\Lambda^2}}
++iD\,\sum_{k=1}^{\infty}\frac{(-1)^k}{k(k+1)} \left(\frac{iD}{2|\sigma|^2}\right)^k
+\right\}
+\eeq
+The first term comes from Witten's superpotential. The first term of the series (with k=1)
+is taken into account by kinetic term. Thus we can write our effective action as
+\beqn
+S &=& 
+\frac{N}{4\pi}\int d^4 x\left\{\int d^4\theta \frac12\left|\ln{\Sigma}\right|^2
+\right.
+\nonumber\\
+&&
+-i\int d^2\theta\left[\sqrt{2}\Sigma \ln{\sqrt{2}\Sigma}-\sqrt{2}\Sigma
+\right.
+\nonumber\\
+&&
+\left.\left.
+-\frac12\,\sqrt{2}\Sigma\,\sum_{k=2}^{\infty}\frac{(-1)^k}{k(k+1)(k-1)} 
+\left(\frac{S}{\sqrt{2}\Sigma}\right)^k
+\right]\right\} +c.c
+\eeqn
+Is this expression correct? Here I use your definition of $S$.
+
+The series in the third line can be written as a $D$-term. We get
+\beqn
+S &=& 
+\frac{N}{4\pi}\int d^4 x\left\{\int d^4\theta \frac12\left|\ln{\Sigma}\right|^2
+\right.
+\nonumber\\
+&&
+-i\int d^2\theta\left[\sqrt{2}\Sigma \ln{\sqrt{2}\Sigma}-\sqrt{2}\Sigma\right]
+\nonumber\\
+&&
+\left.
+-\int d^4\theta\frac{1}{2}\,\ln{\bar{\Sigma}}\,\sum_{k=1}^{\infty}\frac{(-1)^{(k+1)}}{k(k+1)(k+2)} 
+\left(\frac{S}{\sqrt{2}\Sigma}\right)^k
+ +c.c. \right\}
+\eeqn
+Here we see explicitly that the only $F$-term is the Witten's superpotential while all 
+other terms are $D$-terms.
+
+
+The last term can be rewritten as 
+\beqn
+&&
+S = 
+\frac{N}{4\pi}\int d^4 x\left\{\int d^4\theta \frac12\left|\ln{\Sigma}\right|^2
+-i\int d^2\theta\left[\sqrt{2}\Sigma \ln{\sqrt{2}\Sigma}-\sqrt{2}\Sigma\right]
+\right.
+\nonumber\\
+&&
+-\int d^4\theta\frac{1}{2}\,\ln{\bar{\Sigma}}\,\left[\frac12\left(1+\left(\frac{\sqrt{2}\Sigma}{S}\right)
+\right)^2\,\ln{\left(1+\left(\frac{S}{\sqrt{2}\Sigma}\right)\right)} -\frac34 
+-\frac12\frac{\sqrt{2}\Sigma}{S}
+\right] 
+\nonumber\\
+&&
+\left.
++c.c. \right\}
+\eeqn
+
+
+\end{document}
