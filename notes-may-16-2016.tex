@@ -1,0 +1,373 @@
+\documentclass[epsfig,12pt]{article}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{relsize}
+\usepackage{geometry}
+\geometry{letterpaper}
+\usepackage{color}
+\usepackage{bm}
+\usepackage{slashed}
+%\usepackage{showlabels}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                     D O C U M E N T   S E T T I N G S                        %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\baselinestretch{1.1}
+
+\hyphenation{con-fi-ning}
+\hyphenation{Cou-lomb}
+\hyphenation{Yan-ki-e-lo-wicz}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                              %
+%                                                                              %
+%                      C O M M O N   D E F I N I T I O N S                     %
+%                                                                              %
+%                                                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\beq{\begin{equation}}
+\def\eeq{\end{equation}}
+\def\beqn{\begin{eqnarray}}
+\def\eeqn{\end{eqnarray}}
+\def\beqn{\begin{eqnarray}}
+\def\eeqn{\end{eqnarray}}
+\def\nn{\nonumber}
+\def\ba{\beq\new\begin{array}{c}}
+\def\ea{\end{array}\eeq}
+\def\be{\ba}
+\def\ee{\ea}
+\newcommand{\beas}{\begin{eqnarray*}}
+\newcommand{\eeas}{\end{eqnarray*}}
+\newcommand{\defi}{\stackrel{\rm def}{=}}
+\newcommand{\non}{\nonumber}
+\newcommand{\bquo}{\begin{quote}}
+\newcommand{\enqu}{\end{quote}}
+\newcommand{\m}{\tilde m}
+\newcommand{\trho}{\tilde{\rho}}
+\newcommand{\tn}{\tilde{n}}
+\newcommand{\tN}{\tilde N}
+%\newcommand{\p}{\partial}
+\newcommand{\gsim}{\lower.7ex\hbox{$\;\stackrel{\textstyle>}{\sim}\;$}}
+\newcommand{\lsim}{\lower.7ex\hbox{$\;\stackrel{\textstyle<}{\sim}\;$}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% definitions
+
+\def\de{\partial}
+\def\const{\hbox {\rm const.}}  
+\def\o{\over}
+\def\im{\hbox{\rm Im}}
+\def\re{\hbox{\rm Re}}
+\def\bra{\langle}\def\ket{\rangle}
+\def\Arg{\hbox {\rm Arg}}
+\def\Re{\hbox {\rm Re}}
+\def\Im{\hbox {\rm Im}}
+\def\diag{\hbox{\rm diag}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\QATOPD#1#2#3#4{{#3 \atopwithdelims#1#2 #4}}
+\def\stackunder#1#2{\mathrel{\mathop{#2}\limits_{#1}}}
+\def\stackreb#1#2{\mathrel{\mathop{#2}\limits_{#1}}}
+\def\res{{\rm res}}
+\def\Bf#1{\mbox{\boldmath $#1$}}
+\def\balpha{{\Bf\alpha}}
+\def\bbeta{{\Bf\beta}}
+\def\bgamma{{\Bf\gamma}}
+\def\bnu{{\Bf\nu}}
+\def\bmu{{\Bf\mu}}
+\def\bphi{{\Bf\phi}}
+\def\bPhi{{\Bf\Phi}}
+\def\bomega{{\Bf\omega}}
+\def\blambda{{\Bf\lambda}}
+\def\brho{{\Bf\rho}}
+\def\bsigma{{\bfit\sigma}}
+\def\bxi{{\Bf\xi}}
+\def\bbeta{{\Bf\eta}}
+\def\d{\partial}
+\def\der#1#2{\frac{\d{#1}}{\d{#2}}}
+\def\Im{{\rm Im}}
+\def\Re{{\rm Re}}
+\def\rank{{\rm rank}}
+\def\diag{{\rm diag}}
+\def\2{{1\over 2}}
+\def\x{\stackrel{\otimes}{,}}
+
+\def\ba{\beq\new\begin{array}{c}}
+\def\ea{\end{array}\eeq}
+\def\be{\ba}
+\def\ee{\ea}
+\def\stackreb#1#2{\mathrel{\mathop{#2}\limits_{#1}}}
+
+
+
+\newcommand{\nfour}{${\cal N}=4\;$}
+\newcommand{\none}{${\mathcal N}=1\,$}
+\newcommand{\nonen}{${\mathcal N}=1$}
+\newcommand{\ntwo}{${\mathcal N}=2$}
+\newcommand{\ntt}{${\mathcal N}=(2,2)\,$}
+\newcommand{\nzt}{${\mathcal N}=(0,2)\,$}
+\newcommand{\ntwon}{${\mathcal N}=2$}
+\newcommand{\ntwot}{${\mathcal N}= \left(2,2\right) $ }
+\newcommand{\ntwoo}{${\mathcal N}= \left(0,2\right) $ }
+\newcommand{\ntwoon}{${\mathcal N}= \left(0,2\right)$}
+
+
+\newcommand{\ca}{{\mathcal A}}
+\newcommand{\cell}{{\mathcal L}}
+\newcommand{\cw}{{\mathcal W}}
+\newcommand{\cs}{{\mathcal S}}
+\newcommand{\vp}{\varphi}
+\newcommand{\pt}{\partial}
+\newcommand{\ve}{\varepsilon}
+\newcommand{\gs}{g^{2}}
+\newcommand{\zn}{$Z_N$}
+\newcommand{\cd}{${\mathcal D}$}
+\newcommand{\cde}{{\mathcal D}}
+\newcommand{\cf}{${\mathcal F}$}
+\newcommand{\cfe}{{\mathcal F}}
+\newcommand{\ff}{\mc{F}}
+\newcommand{\bff}{\ov{\mc{F}}}
+
+
+\newcommand{\p}{\partial}
+\newcommand{\wt}{\widetilde}
+\newcommand{\ov}{\overline}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\md}{\mathcal{D}}
+\newcommand{\ml}{\mathcal{L}}
+\newcommand{\mw}{\mathcal{W}}
+\newcommand{\ma}{\mathcal{A}}
+
+
+\newcommand{\GeV}{{\rm GeV}}
+\newcommand{\eV}{{\rm eV}}
+\newcommand{\Heff}{{\mathcal{H}_{\rm eff}}}
+\newcommand{\Leff}{{\mathcal{L}_{\rm eff}}}
+\newcommand{\el}{{\rm EM}}
+\newcommand{\uflavor}{\mathbf{1}_{\rm flavor}}
+\newcommand{\lgr}{\left\lgroup}
+\newcommand{\rgr}{\right\rgroup}
+
+
+\newcommand{\Mpl}{M_{\rm Pl}}
+\newcommand{\suc}{{{\rm SU}_{\rm C}(3)}}
+\newcommand{\sul}{{{\rm SU}_{\rm L}(2)}}
+\newcommand{\sutw}{{\rm SU}(2)}
+\newcommand{\suth}{{\rm SU}(3)}
+\newcommand{\ue}{{\rm U}(1)}
+
+
+\newcommand{\LN}{\Lambda_\text{SU($N$)}}
+\newcommand{\sunu}{{\rm SU($N$) $\times$ U(1) }}
+\newcommand{\sunun}{{\rm SU($N$) $\times$ U(1)}}
+\def\cfl {$\text{SU($N$)}_{\rm C+F}$ }
+\def\cfln {$\text{SU($N$)}_{\rm C+F}$}
+\newcommand{\mUp}{m_{\rm U(1)}^{+}}
+\newcommand{\mUm}{m_{\rm U(1)}^{-}}
+\newcommand{\mNp}{m_\text{SU($N$)}^{+}}
+\newcommand{\mNm}{m_\text{SU($N$)}^{-}}
+\newcommand{\AU}{\mc{A}^{\rm U(1)}}
+\newcommand{\AN}{\mc{A}^\text{SU($N$)}}
+\newcommand{\aU}{a^{\rm U(1)}}
+\newcommand{\aN}{a^\text{SU($N$)}}
+\newcommand{\baU}{\ov{a}{}^{\rm U(1)}}
+\newcommand{\baN}{\ov{a}{}^\text{SU($N$)}}
+\newcommand{\lU}{\lambda^{\rm U(1)}}
+\newcommand{\lN}{\lambda^\text{SU($N$)}}
+\newcommand{\bxir}{\ov{\xi}{}_R}
+\newcommand{\bxil}{\ov{\xi}{}_L}
+\newcommand{\xir}{\xi_R}
+\newcommand{\xil}{\xi_L}
+\newcommand{\bzl}{\ov{\zeta}{}_L}
+\newcommand{\bzr}{\ov{\zeta}{}_R}
+\newcommand{\zr}{\zeta_R}
+\newcommand{\zl}{\zeta_L}
+\newcommand{\nbar}{\ov{n}}
+\newcommand{\nnbar}{n\ov{n}}
+\newcommand{\muU}{\mu_\text{U}}
+
+
+\newcommand{\cpn}{CP$^{N-1}$\,}
+\newcommand{\CPC}{CP($N-1$)$\times$C }
+\newcommand{\CPCn}{CP($N-1$)$\times$C}
+
+
+\newcommand{\lar}{\lambda_R}
+\newcommand{\lal}{\lambda_L}
+\newcommand{\larl}{\lambda_{R,L}}
+\newcommand{\lalr}{\lambda_{L,R}}
+\newcommand{\blar}{\ov{\lambda}{}_R}
+\newcommand{\blal}{\ov{\lambda}{}_L}
+\newcommand{\blarl}{\ov{\lambda}{}_{R,L}}
+\newcommand{\blalr}{\ov{\lambda}{}_{L,R}}
+
+
+\newcommand{\bpsi}{\ov{\psi}{}}
+
+
+\newcommand{\hphi}{\hat\phi{}}
+\newcommand{\hbphi}{\hat{\ov\phi}{}}
+\newcommand{\hxi}{\hat\xi{}}
+\newcommand{\hbxi}{\hat{\ov\xi}{}}
+\newcommand{\hsigma}{\hat\sigma{}}
+\newcommand{\hbsigma}{\hat{\ov\sigma}{}}
+\newcommand{\hlambda}{\hat\lambda{}}
+\newcommand{\hblambda}{\hat{\ov\lambda}{}}
+\newcommand{\hz}{\hat z{}}
+\newcommand{\hbz}{\hat{\ov z}{}}
+\newcommand{\hzeta}{\hat\zeta{}}
+\newcommand{\hbzeta}{\hat{\ov\zeta}{}}
+
+
+
+\newcommand{\qt}{\wt{q}}
+\newcommand{\bq}{\ov{q}}
+\newcommand{\bqt}{\overline{\widetilde{q}}}
+
+
+\newcommand{\eer}{\epsilon_R}
+\newcommand{\eel}{\epsilon_L}
+\newcommand{\eerl}{\epsilon_{R,L}}
+\newcommand{\eelr}{\epsilon_{L,R}}
+\newcommand{\beer}{\ov{\epsilon}{}_R}
+\newcommand{\beel}{\ov{\epsilon}{}_L}
+\newcommand{\beerl}{\ov{\epsilon}{}_{R,L}}
+\newcommand{\beelr}{\ov{\epsilon}{}_{L,R}}
+
+
+\newcommand{\bi}{{\bar \imath}}
+\newcommand{\bj}{{\bar \jmath}}
+\newcommand{\bk}{{\bar k}}
+\newcommand{\bl}{{\bar l}}
+\newcommand{\bmm}{{\bar m}}
+
+
+\newcommand{\nz}{{n^{(0)}}}
+\newcommand{\no}{{n^{(1)}}}
+\newcommand{\bnz}{{\ov{n}{}^{(0)}}}
+\newcommand{\bno}{{\ov{n}{}^{(1)}}}
+\newcommand{\Dz}{{D^{(0)}}}
+\newcommand{\Do}{{D^{(1)}}}
+\newcommand{\bDz}{{\ov{D}{}^{(0)}}}
+\newcommand{\bDo}{{\ov{D}{}^{(1)}}}
+\newcommand{\sigz}{{\sigma^{(0)}}}
+\newcommand{\sigo}{{\sigma^{(1)}}}
+\newcommand{\bsigz}{{\ov{\sigma}{}^{(0)}}}
+\newcommand{\bsigo}{{\ov{\sigma}{}^{(1)}}}
+
+
+\newcommand{\rrenz}{{r_\text{ren}^{(0)}}}
+\newcommand{\bren}{{\beta_\text{ren}}}
+
+
+\newcommand{\Tr}{\text{Tr}}
+\newcommand{\Ts}{\text{Ts}}
+\newcommand{\dm}{\hat{{\scriptstyle \Delta} m}}
+\newcommand{\dmdag}{\hat{{\scriptstyle \Delta} m}{}^\dag}
+\newcommand{\mhat}{\widehat{m}}
+\newcommand{\deltam}{{\scriptstyle \Delta} m}
+\newcommand{\nvac}{\vec{n}{}_\text{vac}}
+
+
+\newcommand{\ie}{{\it i.e.}~}
+\newcommand{\eg}{{\it e.g.}~}
+\newcommand{\ansatz}{{\it ansatz} }
+
+
+\begin{document}
+
+\begin{center}
+\large 					Summary as of May 16, 2016\\[4mm]
+\end{center}
+
+	We assume that the following contributions comprise the effective action:
+\begin{align}
+\label{Lsusy}
+	\frac{4\pi}{N}\, \cell_\text{eff} &    ~~=~~
+	-\, \int\, \bigg\lgroup d^4\theta\, \frac{1}{2}\, \Big| \ln \sqrt{2}\Sigma \, \Big|^2
+			~+~ 
+	G(u, \ov u)
+			~+~
+	\\[2mm]
+%
+\notag
+	&
+			~+~
+			i\, d^2\tilde\theta 
+			\lgr \sqrt{2}\Sigma\, \ln \sqrt{2}\Sigma  ~-~ \sqrt{2}\Sigma \rgr
+			~+~
+			i\, d^2\ov{\tilde\theta}
+			\lgr \sqrt{2}\ov\Sigma\, \ln \sqrt{2}\ov\Sigma  ~-~ \sqrt{2}\ov\Sigma \rgr
+			\!\!\bigg\rgroup.
+\end{align}
+
+	Matching the effective potential and the kinetic term $ F_{\mu\nu}^2 $
+	from {\sc arXiv:0803.0698} gives
+\beq
+%
+\label{G}
+	G_{u\ov u}    ~~=~~	-\,\frac{1}{x^4}\,\lgr 1 ~+~ 2\,\frac{y^2}{x^2} \rgr
+				\int_0^x\, \ln (1 \,+\, x)\, dx
+				~-~  \frac{1}{6}\, \frac{y^2}{x^3\, (1 \,+\, x)}\,.
+\eeq
+	Here
+\begin{align*}
+%
+	u    & ~~=~~    \frac{S}{\sqrt{2}\Sigma}    ~~\propto~~    \frac{iD ~-~ F_{03}}{\phi}
+%
+	&
+	\ov u& ~~=~~    \frac{\ov S}{\sqrt{2}\ov\Sigma}    ~~\propto~~    \frac{iD ~+~ F_{03}}{\phi}
+	\\[2mm]
+%
+	x    & ~~=~~    \frac{u ~+~ \ov u}{2}    ~~\propto~~    \frac{iD}{\phi}
+%
+	&
+	y    & ~~=~~    \frac{\ov u ~-~ u}{2}    ~~\propto~~    \frac{F_{03}}{\phi}
+	\,,
+\end{align*}
+	neglecting fermions.
+
+	The effective action \eqref{Lsusy} produces the following kinetic term for $ \lambda $:
+\beq
+\label{kin_lambda}
+	-\, \frac{\blar\, i\overleftrightarrow{\p} \lar ~+~ \blal\, i\overleftrightarrow{\p} \lal}{\phi}\,
+		x^2 \lgr 3\,G_{u\bar u}  ~+~  x\, \big(\, G_{uu\bar u} \,+\, G_{\bar u\bar u u} \,\big) \rgr.
+\eeq
+	Substituting \eqref{G} gives,
+\beq
+	-\, \frac{\blar\, i\overleftrightarrow{\p} \lar ~+~ \blal\, i\overleftrightarrow{\p} \lal}{\phi}\,
+	\frac{ \ln (1 + x) \,-\, x } { x^2 }\,,
+\eeq
+	which is the same coefficient that we obtained a year ago using our previous approach.
+	This also is the \emph{correct} answer for that diagram.
+
+	As for the kinetic term for $ \sigma $, the correct expression is, as we know,
+\beq
+	\frac{4\pi}{N}\, \cell_\text{eff}    ~~\supset~~
+		\frac{1}{12}\, \frac{(\p_\mu\, \phi)^2}{(\, \phi \,+\, iD \,)^2}\,.
+\eeq
+	The supersymmetric Lagrangian \eqref{Lsusy} produces the following
+	expression,
+\beq
+	\frac{4\pi}{N}\, \cell_\text{eff}    ~~\supset~~
+		-\, \frac{(\p_\mu\, \phi)^2}{\phi^2}\, 
+		x^2 \lgr 3\,G_{u\bar u}  ~+~  x\, \big(\, G_{uu\bar u} \,+\, G_{\bar u\bar u u} \,\big) \rgr.
+\eeq
+	Notice that the bracket is the same as in \eqref{kin_lambda}, and so gives a logarithm.
+
+\end{document}
